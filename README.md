@@ -2,5 +2,8 @@
 The Vue.js course from Udemy - The Complete Guide (with Router, Vuex, Composition API).
 
 Lesson 5:
-    starts the first pratical exercise in which we create an
+    * starts the first pratical exercise in which we create an
     app using only JS.
+
+Lesson 6:
+    * rebuilding-the-app-with-vue
