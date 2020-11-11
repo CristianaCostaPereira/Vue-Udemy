@@ -1,6 +1,6 @@
 Vue.createApp({
 
-  data () {
+  data() {
     return {
       goals: [],
       enteredValue: ''
