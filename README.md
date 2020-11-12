@@ -8,6 +8,7 @@ Lesson 5 (Section 1 of the course):
 Lesson 6 (Section 1):
     * re-building the previous app with _Vue;
 
-Lesson 13-14 (Section 2):
-    * creating and connecting Vue App instances;
-    * Interpolation and Data Binging
+Lesson 13-15 (Section 2):
+    * class 13 - creating and connecting Vue App instances;
+    * class 14 - interpolation and data binging;
+    * class 15 - binding attributes with the `v-bind` directive;

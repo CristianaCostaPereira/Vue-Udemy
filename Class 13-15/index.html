@@ -25,7 +25,13 @@
     <section id="user-goal">
       <h2>My Course Goal</h2>
 
-      <p></p>   
+      <!-- Outputs my data property -->
+      <p>{{ courseGoal }}</p>
+
+      <!-- v-bind tells Vue to set to the value of an attribute on a HTML element -->
+      <p>
+        Learn more <a v-bind:href="vueLink">here</a> about Vue.
+      </p>
     </section>
   </body>
 </html>
