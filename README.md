@@ -6,9 +6,14 @@ Lesson 5 (Section 1 of the course):
     app using only JS;
 
 Lesson 6 (Section 1):
-    * re-building the previous app with _Vue;
+    * re-building the previous app with Vue;
 
 Lesson 13-15 (Section 2):
     * class 13 - creating and connecting Vue App instances;
     * class 14 - interpolation and data binging;
     * class 15 - binding attributes with the `v-bind` directive;
+
+Lesson 16 (Section 2):
+    * added a bit dynamism to the app (whenever it is reloaded, randomly changes the text content);
+    * understanding "methods" in Vue apps;
+    
