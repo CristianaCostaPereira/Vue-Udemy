@@ -17,7 +17,6 @@ const app = Vue.createApp({
             } else {
                 return 'Master Vue 🧐 !';
             }
-
         }
     }
 });
