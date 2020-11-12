@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Vue Basics</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Vue Course Goals</h1>
+    </header>
+
+    <section id="user-goal">
+      <h2>My Course Goal</h2>
+
+      <!-- Tells Vue that the content should be interpreted as HTML, so it should NOT be output as text -->
+      <!-- When we get some contents stored in our Vue app which contains HTML code, that should be treated as HTML -->
+      <!-- When we need to output something as HTML -->
+      <p v-html="outputGoal()"></p>
+      <p>
+        Learn more <a v-bind:href="vueLink">here</a> about Vue.
+      </p>
+    </section>
+  </body>
+</html>

@@ -19,4 +19,8 @@ Lesson 16 (Section 2):
 
 Lesson 17 (Section 2):
     * working with data inside of a Vue app.
+
+Lesson 18 (Section 2):
+    * outputting raw HTML content with `v-html`;
+    * not needed to often, and should not be used as a default because we can introduce security issues because we basically circumvent the built in cross site scripting attack protection we have with the double curly braces.
     
