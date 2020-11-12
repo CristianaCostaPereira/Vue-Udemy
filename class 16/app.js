@@ -7,7 +7,7 @@ const app = Vue.createApp({
         };
     },
     // Allows to define functions!
-    // We pass a JS object, which will be full of methods (functions) that we define at our will
+    // Takes an object, which will be full of methods (functions) that we define at our will
     // All properties defined here need to be FUNCTIONS because they need to be callable as functions
     methods: {
         outputGoal() {
