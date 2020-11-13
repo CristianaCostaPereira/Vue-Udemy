@@ -29,14 +29,14 @@
       <p>{{ addAge() }}</p>
 
       <!-- 4) Output a random number (0 to 1) -->
-      <p>{{ myRandomNumber() }}</p>
+      <p>Favorite Number: {{ myRandomNumber() }}</p>
 
       <div>
         <!-- 5) Display some image you found via Google -->
         <img v-bind:src="imgGoogle" />
       </div>
       <!-- 6) Prepopulate the input field with your name via the "value" attribute -->
-      <input type="text" v-bind:value="myName"/>
+      <input type="text" v-bind:value="myName" />
     </section>
   </body>
 </html>

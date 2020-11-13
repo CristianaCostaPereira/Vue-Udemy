@@ -1,10 +1,11 @@
+// Every app can only be connected to one HTML element!
 const app = Vue.createApp({
     data() {
         return {
             myName: 'Cris 😊',
-            myAge: 30 + ' years' ,
-            falseMessage: 'No, a bit higher 😶',
-            trueMessage: 'Almost there 🙂',
+            myAge: 31 + ' years' ,
+            // falseMessage: 'No, a bit higher 😶',
+            // trueMessage: 'Almost there 🙂',
             imgGoogle: 'https://cdn.pixabay.com/photo/2015/12/04/09/13/leaves-1076307_960_720.jpg'
         };
     },
@@ -19,12 +20,13 @@ const app = Vue.createApp({
         },
 
         myRandomNumber() {
-            const favoriteNumber = Math.random();
-            if (favoriteNumber <0.5) {
-                return this.falseMessage;
-            } else {
-                return this.trueMessage;
-            }
+            return Math.random();
+            // For changing the messages set in data when we reload the page
+            // if (Math.random <0.5) {
+            //     return this.falseMessage;
+            // } else {
+            //     return this.trueMessage;
+            // }
         }
     }
 });
