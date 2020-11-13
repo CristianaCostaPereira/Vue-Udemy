@@ -23,4 +23,6 @@ Lesson 17 (Section 2):
 Lesson 18 (Section 2):
     * outputting raw HTML content with `v-html`;
     * not needed to often, and should not be used as a default because we can introduce security issues because we basically circumvent the built in cross site scripting attack protection we have with the double curly braces.
-    
+
+Assignment section 2:
+    * Put in practice what was learn so far (data binding).
