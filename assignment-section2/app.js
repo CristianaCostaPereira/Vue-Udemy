@@ -3,8 +3,9 @@ const app = Vue.createApp({
         return {
             myName: 'Cris 😊',
             myAge: 30 + ' years' ,
-            falseMessage: 'No, a bit higher',
-            trueMessage: 'Almost there'
+            falseMessage: 'No, a bit higher 👆',
+            trueMessage: 'Almost there 🤏',
+            imgGoogle: 'https://cdn.pixabay.com/photo/2015/12/04/09/13/leaves-1076307_960_720.jpg'
         };
     },
 
