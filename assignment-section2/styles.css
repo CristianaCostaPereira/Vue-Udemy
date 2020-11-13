@@ -21,14 +21,14 @@ section {
 h2 {
   font-size: 2rem;
   border-bottom: 4px solid #ccc;
-  color: #970076;
+  color: #8e816e;
   margin: 0 0 1rem 0;
 }
 
 p {
   font-size: 1.25rem;
   font-weight: bold;
-  background-color: #970076;
+  background-color: #8e816e;
   padding: 0.5rem;
   color: white;
   border-radius: 25px;
@@ -57,7 +57,7 @@ button {
 
 button:hover,
 button:active {
-  background-color: #ec3169;
-  border-color: #ec3169;
+  background-color: #8e816e;
+  border-color: #8e816e;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
 }
