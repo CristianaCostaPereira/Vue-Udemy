@@ -38,3 +38,6 @@ Lesson 21:
 
 Lesson 22:
     * working with event arguments by passing them to methods.
+
+Lesson 23:
+    * using the native event object.
