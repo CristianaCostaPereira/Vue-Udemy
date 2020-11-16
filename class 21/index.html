@@ -25,11 +25,8 @@
     <section id="events">
       <h2>Events in Action</h2>
 
-      <!-- Declared where we wanna have the eventListeners and where we wanna to output values and which values Vue should be aware of -->
-      <!-- Vue detects that the counter changes, when a button is clicked, and then finds the places, on the page, where the counter is used, to update what the user sees with JS behind the scenes -->
-      <!-- conter++ is JS code that adds one number to the counter  -->
-      <button v-on:click="counter++">Add</button>
-      <button v-on:click="counter--">Reduce</button>
+      <button v-on:click="addCounter()">Add</button>
+      <button v-on:click="reduceCounter()">Reduce</button>
       
       <p>Result: {{ counter }}</p>
     </section>
