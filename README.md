@@ -31,3 +31,7 @@ Lesson 20:
     * listening to user events;
     * the `v-on` directive;
     * understanding event binding.
+
+Lesson 21:
+    * events and methods;
+    * code from previous exercise reorganitation (all logic code into JS).
