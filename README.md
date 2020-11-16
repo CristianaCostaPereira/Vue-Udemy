@@ -28,4 +28,6 @@ Assignment section 2:
     * put in practice what was learned so far (data binding).
 
 Lesson 20:
-    * understanding event binding
+    * listening to user events;
+    * the `v-on` directive;
+    * understanding event binding.
