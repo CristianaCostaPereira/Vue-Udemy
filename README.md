@@ -35,3 +35,6 @@ Lesson 20:
 Lesson 21:
     * events and methods;
     * code from previous exercise reorganitation (all logic code into JS).
+
+Lesson 22:
+    * working with event arguments by passing them to methods.

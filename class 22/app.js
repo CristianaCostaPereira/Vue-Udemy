@@ -5,13 +5,17 @@ const app = Vue.createApp({
       };
     },
     methods: {
-        // this method above doesn't return anything because it doesn't has to, because the click listener doesnt want a return value
-        addCounter() {
-            this.counter++ // or this.counter = this.conter + 1, it's the same thing
+      // passing arguments to methods
+      // Use number as a parameter to add/remove a number more dynamically.
+      // Then these methods will never need to be changed when we decide to add or deduct a different number
+      // It will only be changed in the HTML
+        addCounter(number) {
+          this.counter = this.counter + number;
+          // We could also hard-coded: this.counter = this.counter + 10 but it is less dynamic and whenever we planned to change the number we also need to change it here in code
         },
 
-        reduceCounter() {
-            this.conter--
+        reduceCounter(number) {
+          this.counter = this.counter - number;
         }
     }
   });

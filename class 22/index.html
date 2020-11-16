@@ -24,9 +24,10 @@
 
     <section id="events">
       <h2>Events in Action</h2>
-
-      <button v-on:click="addCounter()">Add</button>
-      <button v-on:click="reduceCounter()">Reduce</button>
+      
+      <!-- Calls the method with a value of 5 -->
+      <button v-on:click="addCounter(5)">Add 5</button>
+      <button v-on:click="reduceCounter(5)">Substract 5</button>
       
       <p>Result: {{ counter }}</p>
     </section>
