@@ -56,3 +56,6 @@ Lesson 25:
 
 Assignment 2 section 2:
     * practice event binding.
+
+Lesson 26:
+    * data binding + event binding = two-way binding
