@@ -12,7 +12,7 @@ const app = Vue.createApp({
         },
 
         setInput(event) {
-            this.message = event.target.value;
+            this.message = event.target.value; // What the user enters
         },
 
         confirmInput() {
