@@ -1,13 +1,22 @@
 const app = Vue.createApp({
-    // data() {
-    //     return {
-    //         dd
-    //     };
-    // },
+    data() {
+        return {
+            message: '',
+            addInput: ''
+        };
+    },
 
     methods: {
         showAlert() {
             alert('On my way to master Vue 😄 !');
+        },
+
+        setInput(event) {
+            this.message = event.target.value;
+        },
+
+        confirmInput() {
+            this.addInput = this.message // Sets it equal to the internally stored name
         }
     }
 });
