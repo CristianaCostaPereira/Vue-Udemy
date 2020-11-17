@@ -40,4 +40,6 @@ Lesson 22:
     * working with event arguments by passing them to methods.
 
 Lesson 23:
-    * using the native event object.
+    * using the native `event` object;
+    * `event` as an argument;
+    * update of a property (name, in this case) whenever it is typed in the `input` field which will be outputed in our paragraph.
