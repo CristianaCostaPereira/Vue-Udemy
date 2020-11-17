@@ -6,6 +6,7 @@ const app = Vue.createApp({
       confirmedName: ''
     };
   },
+  
   methods: {
     confirmInput() {
       this.confirmedName = this.name // sets it equal to the internally stored name
