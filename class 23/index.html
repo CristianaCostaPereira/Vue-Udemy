@@ -30,7 +30,10 @@
       
       <p>Result: {{ counter }}</p>
 
-      <input type="text">
+      <!-- We will want to listen to every keystroke -->
+      <!-- The best event to listen to on an input HTML element is the "INPUT" event -->
+      <!-- Below we are telling Vue that we want to listen to this input event on this input element -->
+      <input type="text" v-on:input="setName">
 
       <!-- Output the user's name, but now the user enteres his name himself in the input-->
       <p>Your Name: {{ name }}</p>

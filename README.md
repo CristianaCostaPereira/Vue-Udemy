@@ -42,4 +42,5 @@ Lesson 22:
 Lesson 23:
     * using the native `event` object;
     * `event` as an argument;
+    * `input` event, a default DOM event available on input elements (nothing Vue specific) also listened in vanilla JS;
     * update of a property (name, in this case) whenever it is typed in the `input` field which will be outputed in our paragraph.
