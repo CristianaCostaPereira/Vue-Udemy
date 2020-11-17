@@ -50,3 +50,6 @@ Lesson 24:
     * exploring event modifiers;
     * `.prevent` to prevent the page reload, default;
     * `keyup` event.
+
+Lesson 25:
+    * locking content with `v-once`.
