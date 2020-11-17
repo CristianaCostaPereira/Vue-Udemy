@@ -24,7 +24,7 @@ Lesson 18 (Section 2):
     * outputting raw HTML content with `v-html`;
     * not needed to often, and should not be used as a default because we can introduce security issues because we basically circumvent the built in cross site scripting attack protection we have with the double curly braces.
 
-Assignment section 2:
+Assignment 1 section 2:
     * put in practice what was learned so far (data binding).
 
 Lesson 20:
@@ -53,3 +53,6 @@ Lesson 24:
 
 Lesson 25:
     * locking content with `v-once`.
+
+Assignment 2 section 2:
+    * practice event binding.
