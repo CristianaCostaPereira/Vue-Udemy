@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Vue Basics</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Vue Events</h1>
+    </header>
+
+    <section id="events">
+      <h2>Events in Action</h2>
+      
+      <button v-on:click="addCounter(5)">Add 5</button>
+
+      <!-- We only want to react when the user clicks with the right side of the mouse -->
+      <button v-on:click.right="reduceCounter(5)">Substract 5</button>
+      
+      <p>Result: {{ counter }}</p>
+
+      <!-- Below, keyup event triggers when a key is pressed and released, in this case the 'enter' key specifically -->
+      <!-- Changes when confirm input executes -->
+      <input
+        type="text"
+        v-on:input="setName($event, 'Pereira')"
+        v-on:keyup.enter="confirmInput"
+      />
+      
+      <p>Your Name: {{ confirmedName }}</p>
+
+      <!-- Listen to the submit event which we can listen on form elements -->
+      <!-- the '.' adds the event modifier after the event name -->
+      <!-- .prevent will prevent the browser default or reload -->
+      <form v-on:submit.prevent="submitForm">
+        <input type="text">
+        <button>Sign in</button>
+      </form>
+    </section>
+  </body>
+</html>
