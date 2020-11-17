@@ -16,7 +16,7 @@ const app = Vue.createApp({
         },
 
         confirmInput() {
-            this.addInput = this.message // Sets it equal to the internally stored name
+            this.addInput = this.message // Sets it equal to the internally stored message
         }
     }
 });
