@@ -60,4 +60,9 @@ Assignment 2 section 2:
 Lesson 26:
     * `v-model`;
     * data binding + event binding = two-way binding;
-    * two-way binding: because we are communicating in two ways; we are listening to an event coming out of the input element to the input event and, at the same time, we are writing the value back to the input element through its value attribute;
+    * two-way binding: because we are communicating in two ways; we are listening to an event coming out of the input element to the input event and, at the same time, we are writing the value back to the input element through its value attribute.
+
+Lesson 27:
+    * methods used for data binding: how it works;
+    * 'advanced' reactivity;
+    * a better alternative to 'methods' in certain cases

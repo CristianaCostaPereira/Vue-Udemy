@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Vue Basics</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Vue Events</h1>
+    </header>
+
+    <section id="events">
+      <h2>Events in Action</h2>
+
+      <button v-on:click="add(10)">Add 10</button>
+      <button v-on:click="reduce(5)">Subtract 5</button>
+
+      <p>Result: {{ counter }}</p>
+
+      <!-- Clears the input -->
+      <input type="text" v-model="name">
+   
+      <button v-on:click="resetInput">Reset Input</button>
+      
+      <!-- A problem with Vue is if we call a method like below, this methods will also be re-executed whenever anything on the page changes, like the counter property, because Vue can't know what this method does, for exemple, if it uses 'counter'-->
+      <!-- That is why Vue re-executes any method we are using anywhere in the HTML code, whever anything on the screen changes -->
+      <!-- This is not good for performance -->
+      <!-- And it is why methods are not the best solution for outputting dynamically calculated value -->
+      <p>Your Name: {{ outputFullName() }}</p>
+    </section>
+  </body>
+</html>
