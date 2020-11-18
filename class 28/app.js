@@ -6,7 +6,7 @@ const app = Vue.createApp({
     };
   },
   
-  // Vue will be aware of the computed dependencies, in this case, 'name', and only re-executed them IF one of the dependencies CHANGES!  
+  // Vue will be aware of the computed dependencies, in this case, 'name', and only re-executed them IF one of the dependencies, inside computed, CHANGES!  
   // fullname, because we are not going to call it and therefore we should name our computed properties just like we would name our data properties
   // Better to use computed properties than methods for outputting DYNAMIC values
   computed: {

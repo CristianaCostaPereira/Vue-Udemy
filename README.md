@@ -71,4 +71,12 @@ Lesson 28:
     * `computed` property.
 
 Lesson 29:
-    * working with watchers
+    * working with watchers.
+
+Lesson 30:
+    * a theoretical class about methods vs computed vs watch.
+
+Lesson 31:
+    * `v-bind` and `v-on` shorthands.
+    * `v-bind:` ---> `:`
+    * `v-on:` ---> `@`
