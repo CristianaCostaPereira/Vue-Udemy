@@ -58,4 +58,6 @@ Assignment 2 section 2:
     * practice event binding.
 
 Lesson 26:
-    * data binding + event binding = two-way binding
+    * `v-model`;
+    * data binding + event binding = two-way binding;
+    * two-way binding: because we are communicating in two ways; we are listening to an event coming out of the input element to the input event and, at the same time, we are writing the value back to the input element through its value attribute;

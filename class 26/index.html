@@ -31,7 +31,18 @@
 
       <p>Result: {{ counter }}</p>
 
-      <input type="text" v-on:input="setName($event, 'Schwarzmüller')">
+      <!-- Clears the input -->
+      <!-- We are using the name property which is the value we are updating and output in input by setting the value attribute -->
+      <!-- Because 'name' is dynamic and we want to use Vue we use the v-bind -->
+      <!-- <input type="text" v-bind:value="name" v-on:input="setName"> is the same as below-->
+      <!-- If we bind the value and listen to input changes on input we can rewrite the value binding and the input eventListener by usind just v-model, as below -->
+
+      <input type="text" v-model="name">
+      
+      <!-- v-model simply WANTS the data property it should manage for us, in our case, 'name' -->
+      <!-- v-model just a shortcut for v-bind:value and v-on input !!!! -->
+      
+      <button v-on:click="resetInput">Reset Input</button>
       
       <p>Your Name: {{ name }}</p>
     </section>
