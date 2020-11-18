@@ -80,3 +80,6 @@ Lesson 31:
     * `v-bind` and `v-on` shorthands.
     * `v-bind:` ---> `:`
     * `v-on:` ---> `@`
+
+Assignment 3 section 2:
+    * practive reactivity.
