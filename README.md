@@ -85,4 +85,7 @@ Assignment 3 section 2:
     * practive reactivity with computed and watch p
 
 Lesson 32:
-    * dynamic styling with inline styles
+    * dynamic styling with inline styles.
+
+Lesson 33:
+    * adding CSS classes dynamically.
