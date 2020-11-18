@@ -14,7 +14,7 @@ const app = Vue.createApp({
     },
 
     // We just don't want to output the number, we want to output a result which is either some text or the number
-    // Now we have the message computed property which depends on our counter property and Vue detectes this dependency and will only re-calculate and re-evaluate message when the counter changes
+    // Now we have the message computed property which depends on our counter property and Vue detectes this dependency and will only re-calculate and re-evaluate message whenever the counter changes
     computed: {
         message() {
             if (this.counter < 37) {
@@ -27,18 +27,16 @@ const app = Vue.createApp({
         }
     },
 
-    // Watch for changes in the message computed properterty
+    // Watch for changes in the message computed property
     // Whenever message CHANGES, whenever has a new value, we want to trigger a watcher
-    // watcher will only executes if message switch for message one, to a number or from a number to message two, or from message one to message two
+    // watcher will only executes if message switch for messageOne, to a number or from a number to messageTwo, or from messageOne to messageTwo
     // So only if the value ield by message really changed, only in this case the watcher executes
     watch: {
-        counter(value) {
-            if (value <= 37) {
+        message() {
                 const that = this;
                 setTimeout(function () {
                     that.counter = 0;
                 }, 5000);
-            }
         }
     },
 });
