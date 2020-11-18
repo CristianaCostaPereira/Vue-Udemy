@@ -65,4 +65,7 @@ Lesson 26:
 Lesson 27:
     * methods used for data binding: how it works;
     * 'advanced' reactivity;
-    * a better alternative to 'methods' in certain cases
+    * a better alternative to 'methods' in certain cases.
+
+Lesson 28:
+    * `computed` property.
