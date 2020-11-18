@@ -69,3 +69,6 @@ Lesson 27:
 
 Lesson 28:
     * `computed` property.
+
+Lesson 29:
+    * working with watchers
