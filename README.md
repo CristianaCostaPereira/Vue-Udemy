@@ -82,4 +82,7 @@ Lesson 31:
     * `v-on:` ---> `@`
 
 Assignment 3 section 2:
-    * practive reactivity.
+    * practive reactivity with computed and watch p
+
+Lesson 32:
+    * dynamic styling with inline styles
