@@ -82,7 +82,7 @@ Lesson 31:
     * `v-on:` ---> `@`
 
 Assignment 3 section 2:
-    * practive reactivity with computed and watch p
+    * practice reactivity with computed and watch.
 
 Lesson 32:
     * dynamic styling with inline styles.
@@ -95,3 +95,6 @@ Lesson 34:
 
 Lesson 35:
     * dynamic classes: array syntax.
+
+Assignment 4 section 2:
+    * practice dynamic styling.
