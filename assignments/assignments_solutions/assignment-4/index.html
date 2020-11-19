@@ -2,49 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue Basics</title>
-
     <link
       href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-
     <script src="https://unpkg.com/vue@next" defer></script>
     <script src="app.js" defer></script>
-
   </head>
   <body>
     <header>
       <h1>Vue Styling</h1>
     </header>
-
     <section id="assignment">
-      <!-- 1) Fetch the user input and use it as a CSS class that is added to paragraph-->
+      <!-- 1) Fetch the user input and use it as a CSS class -->
       <!-- The entered class should be added to the below paragraph -->
-      <!-- v-model to get easier access to the user's input -->
-      <!-- Whatever the user types will be adding as a class -->
-      <input
-        type="text" v-model="userInput"/>
+      <input type="text" v-model="inputClass" />
       <!-- (available classes: "user1", "user2") -->
-
-      <!-- Set userInput as class in the paragraph -->
-      <!-- And everything that the user enters will be added as a CSS class to the paragraph -->
       <p
-        :class="userInput">
+        :class="paraClasses"
+      >
         Style me!
       </p>
-
-      <button>Toggle Paragraph</button>
+      <button @click="toggleParagraphVisibility">Toggle Paragraph</button>
       <!-- 2) Use the "visible" and "hidden" classes to show/ hide the above paragraph -->
       <!-- Clicking the button should toggle between the two options -->
 
       <!-- 3) Add dynamic inline styling to the below paragraph and let the user enter a background-color -->
-      <input type="text" />
-
-      <p>Style me inline!</p>
+      <input type="text" v-model="inputBackgroundColor" />
+      <p :style="{backgroundColor: inputBackgroundColor}">Style me inline!</p>
     </section>
   </body>
 </html>
