@@ -8,13 +8,14 @@ const app = Vue.createApp({
     },
     
     methods: {
+        // So users can toggle the div's and not just set it as activem but also as inactive
         boxSelected(box) {
             if (box === 'A') {
-                this.boxASelected = true;
+                this.boxASelected = !this.boxASelected; // if box A was selected, was true, it is now false because we added the (!) 
             } else if (box === 'B') {
-                this.boxBSelected = true;
+                this.boxBSelected = !this.boxBSelected;
             } else {
-                this.boxCSelected = true;
+                this.boxCSelected = !this.boxCSelected;
             }
         }
     }

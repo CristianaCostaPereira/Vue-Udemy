@@ -34,3 +34,9 @@ header {
     margin: 16px;
     border: 2px dashed #ccc;
 }
+
+/* new class selector created for the exercise */
+.active {
+    border-color: red;
+    background-color: salmon;
+}

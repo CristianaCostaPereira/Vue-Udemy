@@ -21,14 +21,27 @@
       <h1>Vue Dynamic Styling</h1>
     </header>
 
+    <!-- Adding .active dynamically to the div below if boxASelected is true -->
+    <!-- Vue support a speciall syntax specially for class attributes if binding it to v-bind as below -->
+    <!-- Vue supports the object syntax because we bind it -->
     <section id="styling">
       <div
         class="demo"
-        v-bind:style="{borderColor: boxASelected ? 'red' : '#ccc'}"
+        :class="{active: boxASelected}"
         v-on:click="boxSelected('A')">
     </div>
-      <div class="demo" v-on:click="boxSelected('B')"></div>
-      <div class="demo" v-on:click="boxSelected('C')"></div>
+
+      <div
+        class="demo"
+        :class="{active: boxBSelected}" 
+        v-on:click="boxSelected('B')">
+      </div>
+
+      <div
+        class="demo"
+        :class="{active: boxCSelected}"
+        v-on:click="boxSelected('C')">
+      </div>
     </section>
   </body>
 </html>
