@@ -42,9 +42,11 @@
       <!-- Clicking the button should toggle between the two options -->
 
       <!-- 3) Add dynamic inline styling to the below paragraph and let the user enter a background-color -->
-      <input type="text" />
+      <!-- Whatever the user enter as color is saved in inlineBackgroundColor -->
+      <input type="text" v-model="inlineBackgroundColor" />
 
-      <p>Style me inline!</p>
+      <!-- we are setting inlineBackgroundColor as a color for the CSS property backgroundColor -->
+      <p v-bind:style="{backgroundColor: inlineBackgroundColor}">Style me inline!</p>
     </section>
   </body>
 </html>

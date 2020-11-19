@@ -4,6 +4,7 @@ const app = Vue.createApp({
             // Store the user input
             userInput: '',
             visibleParagraph: true,
+            inlineBackgroundColor: '' // task 3
         }
     },
 
