@@ -33,11 +33,11 @@
       <!-- Set userInput as class in the paragraph -->
       <!-- And everything that the user enters will be added as a CSS class to the paragraph -->
       <p
-        :class="userInput">
+        :class="paragraphClasses">
         Style me!
       </p>
 
-      <button>Toggle Paragraph</button>
+      <button v-on:click="toggleVisible">Toggle Paragraph</button>
       <!-- 2) Use the "visible" and "hidden" classes to show/ hide the above paragraph -->
       <!-- Clicking the button should toggle between the two options -->
 
