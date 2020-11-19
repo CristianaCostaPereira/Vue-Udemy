@@ -1,9 +1,8 @@
 const app = Vue.createApp({
     data() {
         return {
-            // Store the user input
-            userInput: '',
-            visibleParagraph: true,
+            userInput: '', // Store the user input, task 1
+            paragraphVisibility: true, // to show or hide the paragraph, task 2
             inlineBackgroundColor: '' // task 3
         }
     },
@@ -14,16 +13,16 @@ const app = Vue.createApp({
             return {
                 user1: this.userInput === 'user1',
                 user2: this.userInput === 'user2',
-                visible: this.visibleParagraph,
-                hidden: !this.visibleParagraph
+                visible: this.paragraphVisibility,
+                hidden: !this.paragraphVisibility
             };
         },
     },
 
     // We want to change this property on every click
     methods: {
-        toggleVisible() {
-            this.visibleParagraph = !this.visibleParagraph
+        toggleVisibility() {
+            this.paragraphVisibility = !this.paragraphVisibility
         }
     }
 });

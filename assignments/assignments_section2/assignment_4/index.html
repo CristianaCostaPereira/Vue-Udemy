@@ -37,15 +37,16 @@
         Style me!
       </p>
 
-      <button v-on:click="toggleVisible">Toggle Paragraph</button>
+      <button v-on:click="toggleVisibility">Toggle Paragraph</button>
       <!-- 2) Use the "visible" and "hidden" classes to show/ hide the above paragraph -->
       <!-- Clicking the button should toggle between the two options -->
 
+      
       <!-- 3) Add dynamic inline styling to the below paragraph and let the user enter a background-color -->
       <!-- Whatever the user enter as color is saved in inlineBackgroundColor -->
       <input type="text" v-model="inlineBackgroundColor" />
 
-      <!-- we are setting inlineBackgroundColor as a color for the CSS property backgroundColor -->
+      <!-- We are setting inlineBackgroundColor as a color for the CSS property backgroundColor -->
       <p v-bind:style="{backgroundColor: inlineBackgroundColor}">Style me inline!</p>
     </section>
   </body>
