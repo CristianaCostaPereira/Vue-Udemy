@@ -92,3 +92,6 @@ Lesson 33:
 
 Lesson 34:
     * classes and computed properties.
+
+Lesson 35:
+    * dynamic classes: array syntax.
