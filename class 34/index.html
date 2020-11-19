@@ -21,25 +21,22 @@
       <h1>Vue Dynamic Styling</h1>
     </header>
 
-    <!-- Adding .active dynamically to the div below if boxASelected is true -->
-    <!-- Vue support a speciall syntax specially for class attributes if binding it to v-bind as below -->
-    <!-- Vue supports the object syntax because we bind it -->
     <section id="styling">
       <div
         class="demo"
-        :class="{active: boxASelected}"
+        :class="boxAClasses"
         v-on:click="boxSelected('A')">
       </div>
 
       <div
         class="demo"
-        :class="{active: boxBSelected}" 
+        :class="boxBClasses" 
         v-on:click="boxSelected('B')">
       </div>
 
       <div
         class="demo"
-        :class="{active: boxCSelected}"
+        :class="boxCClasses"
         v-on:click="boxSelected('C')">
       </div>
     </section>

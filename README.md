@@ -89,3 +89,6 @@ Lesson 32:
 
 Lesson 33:
     * adding CSS classes dynamically.
+
+Lesson 34:
+    * classes and computed properties.
