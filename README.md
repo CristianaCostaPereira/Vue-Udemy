@@ -123,3 +123,5 @@ Lesson 46 (Section 3)
 
 Assignment 5 (section 3):
     * practice conditional content and lists.
+
+Course Project: The Monster slayer game (Section 4)
