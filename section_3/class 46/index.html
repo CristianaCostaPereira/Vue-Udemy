@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Vue Course Goals</h1>
+    </header>
+
+    <section id="user-goals">
+      <h2>My course goals</h2>
+
+      <input type="text" v-model="enteredGoal" />
+      
+      <!-- Whenever the button is clicked we want to get the value entered in input above and use it as a goal, which then is added to our goal [] in our data -->
+      <button v-on:click="addGoal">Add Goal</button>
+
+      <!-- Want will show if we have no goals -->
+      <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
+
+      <!-- What we want to output -->
+      <!-- Gives the index off the item in the array by wrapping into parentheses -->
+      <!-- Should use always key attribute whenever we use v-for and wants a unique identification criteria for every item that inputs-->
+      <!-- To help Vue tell the different elements appart -->
+      <ul>
+        <li v-for="(goal, index) in goals" v-bind:key="goal" v-on:click="removeGoal(index)">
+          <p>{{ goal }} - {{ index }}</p>
+
+          <!-- Prevents the removal of the list item when I click on it to write something in the input below -->
+          <!-- Stops propagation, so it makes sure that when we click on the input below the click is only processed there and the click ont he list item is not triggered -->
+          <!--  -->
+          <input type="text" v-on:click.stop>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

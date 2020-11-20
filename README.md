@@ -117,3 +117,6 @@ Lesson 44 (Section 3):
 
 Lesson 45 (Section 3):
     * removing list items.
+
+Lesson 46 (Section 3)
+    * lists and `key` attribute.
