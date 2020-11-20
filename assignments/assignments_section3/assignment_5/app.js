@@ -2,7 +2,8 @@ const app = Vue.createApp({
     data() {
         return {
             tasks: [],
-            enteredTask: ''
+            enteredTask: '',
+            showList: true,
         };
     },
 
@@ -10,6 +11,10 @@ const app = Vue.createApp({
         addTask() {
             this.tasks.push(this.enteredTask);
         },
+
+        toggleList() {
+            this.showList = !this.showList;
+        }
     }
 });
 
