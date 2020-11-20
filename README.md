@@ -27,56 +27,56 @@ Lesson 18 (Section 2):
 Assignment 1 section 2:
     * put in practice what was learned so far (data binding).
 
-Lesson 20:
+Lesson 20 (Section 2):
     * listening to user events;
     * the `v-on` directive;
     * understanding event binding.
 
-Lesson 21:
+Lesson 21 (Section 2):
     * events and methods;
     * code from previous exercise reorganitation (all logic code into JS).
 
-Lesson 22:
+Lesson 22 (Section 2):
     * working with event arguments by passing them to methods.
 
-Lesson 23:
+Lesson 23 (Section 2):
     * using the native `event` object;
     * `event` as an argument;
     * `input` event, a default DOM event available on input elements (nothing Vue specific) also listened in vanilla JS;
     * update of a property (name, in this case) whenever it is typed in the `input` field which will be outputed in our paragraph;
     * the `$ event` (lesson 23_1).
 
-Lesson 24:
+Lesson 24 (Section 2):
     * exploring event modifiers;
     * `.prevent` to prevent the page reload, default;
     * `keyup` event.
 
-Lesson 25:
+Lesson 25 (Section 2):
     * locking content with `v-once`.
 
 Assignment 2 section 2:
     * practice event binding.
 
-Lesson 26:
+Lesson 26 (Section 2):
     * `v-model`;
     * data binding + event binding = two-way binding;
     * two-way binding: because we are communicating in two ways; we are listening to an event coming out of the input element to the input event and, at the same time, we are writing the value back to the input element through its value attribute.
 
-Lesson 27:
+Lesson 27 (Section 2):
     * methods used for data binding: how it works;
     * 'advanced' reactivity;
     * a better alternative to 'methods' in certain cases.
 
-Lesson 28:
+Lesson 28 (Section 2):
     * `computed` property.
 
-Lesson 29:
+Lesson 29 (Section 2):
     * working with watchers.
 
-Lesson 30:
+Lesson 30 (Section 2):
     * a theoretical class about methods vs computed vs watch.
 
-Lesson 31:
+Lesson 31 (Section 2):
     * `v-bind` and `v-on` shorthands.
     * `v-bind:` ---> `:`
     * `v-on:` ---> `@`
@@ -84,17 +84,20 @@ Lesson 31:
 Assignment 3 section 2:
     * practice reactivity with computed and watch.
 
-Lesson 32:
+Lesson 32 (Section 2):
     * dynamic styling with inline styles.
 
-Lesson 33:
+Lesson 33 (Section 2):
     * adding CSS classes dynamically.
 
-Lesson 34:
+Lesson 34 (Section 2):
     * classes and computed properties.
 
-Lesson 35:
+Lesson 35 (Section 2):
     * dynamic classes: array syntax.
 
 Assignment 4 section 2:
     * practice dynamic styling.
+
+Lesson 39 (Section 3):
+    * 
