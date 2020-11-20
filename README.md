@@ -105,3 +105,6 @@ Lesson 40 (Section 3):
 
 Lesson 41 (Section 3):
     * `v-if`, `v-else` and `v-else-if`.
+
+Lesson 42 (Section 3):
+    * when using `v-show`, intead of `v-if`.

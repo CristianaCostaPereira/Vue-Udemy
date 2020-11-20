@@ -26,16 +26,15 @@
 
       <input type="text" v-model="enteredGoal" />
       
+      <!-- Whenever the button is clicked we want to get the value entered in input above and use it as a goal, which then is added to our goal [] in our data -->
       <button v-on:click="addGoal">Add Goal</button>
 
-    
-      <!-- Since goals is an [] we can use the length property -->
-      <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
+      <!-- Doesn't work together with v-if -->
+      <!-- v-show just hides and shows items with CSS !!! -->
+      <!-- ONLY use v-show if we have an element which visibility status changes a lot, like a button that toggles an element between visible and hidden all the time -->
+      <p v-show="goals.length === 0">No goals have been added yet - please start adding some!</p>
 
-      <!-- v-else has to be used on an element that comes DIRECTLY AFTER an element with v-if on it -->
-      <!-- An element bewteen breaks it -->
-      <!-- They control which part of the HTML code are really including or not on the final page, it really removes and adds elements from the DOM -->
-      <ul v-else="">
+      <ul v-show="goals.length > 0">
         <li>Goal</li>
       </ul>
     </section>
