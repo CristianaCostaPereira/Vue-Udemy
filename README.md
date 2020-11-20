@@ -120,3 +120,6 @@ Lesson 45 (Section 3):
 
 Lesson 46 (Section 3)
     * lists and `key` attribute.
+
+Assignment 5 (section 3):
+    * practice conditional content and lists.
