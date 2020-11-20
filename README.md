@@ -108,3 +108,6 @@ Lesson 41 (Section 3):
 
 Lesson 42 (Section 3):
     * when using `v-show`, intead of `v-if`.
+
+Lesson 43 (Section 3):
+    * rendering lists of data with `v-for`.
