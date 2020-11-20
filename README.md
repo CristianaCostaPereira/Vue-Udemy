@@ -102,3 +102,6 @@ Assignment 4 (section 2):
 Lesson 40 (Section 3):
     * rendering content conditionally;
     * `v-if`.
+
+Lesson 41 (Section 3):
+    * `v-if`, `v-else` and `v-else-if`.
