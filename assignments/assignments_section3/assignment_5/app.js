@@ -7,6 +7,12 @@ const app = Vue.createApp({
         };
     },
 
+    computed: {
+        buttonText() {
+            return this.showList ? 'Hide List' : 'Show List';
+        }
+    },
+
     methods: {
         addTask() {
             this.tasks.push(this.enteredTask);
@@ -14,7 +20,7 @@ const app = Vue.createApp({
 
         toggleList() {
             this.showList = !this.showList;
-        }
+        },
     }
 });
 

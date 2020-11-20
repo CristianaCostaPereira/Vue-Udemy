@@ -29,14 +29,16 @@
 
       <button v-on:click="addTask">Add Task</button>
 
-      <ul v-if="tasks.length > 0">
+      <!-- To show or hide our list -->
+      <!-- Shows if true or hides if false-->
+      <ul v-if="showList">
         <!-- 2) Output the list of tasks here -->
-        <li v-for="task in tasks" v-bind:key="task"> {{ task }} </li>
+        <li v-for="task in tasks" v-bind:key="task">{{ task }}</li>
       </ul>
 
       <!-- 3) When the below button is pressed, the list should be shown or hidden -->
       <!-- BONUS: Also update the button caption -->
-      <button v-on:click="toggleList">Hide</button>
+      <button v-on:click="toggleList">{{ buttonText }}</button>
     </section>
   </body>
 </html>
