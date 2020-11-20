@@ -24,12 +24,18 @@
     <section id="user-goals">
       <h2>My course goals</h2>
 
-      <input type="text" />
-
-      <button>Add Goal</button>
-
-      <p>No goals have been added yet - please start adding some!</p>
+      <input type="text" v-model="enteredGoal" />
       
+      <!-- Whenever the button is clicked we want to get the value entered in input above and use it as a goal, which then is added to our goal [] in our data -->
+      <button v-on:click="addGoal">Add Goal</button>
+
+      <!-- Want this to show if we have no goals -->
+      <!-- v-if directive is added on the element that should be rendered conditionally. It is basically the JS if statement -->
+      <!-- Since goals is an [] we can use the length property -->
+      <!-- So if length is zero, that means we have no goals and this paragraph and ALL of its content should be rendered -->
+      <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
+
+      <!-- Only want this to show if we have goals-->
       <ul>
         <li>Goal</li>
       </ul>

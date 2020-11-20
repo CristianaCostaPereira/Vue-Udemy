@@ -54,7 +54,7 @@ Lesson 24 (Section 2):
 Lesson 25 (Section 2):
     * locking content with `v-once`.
 
-Assignment 2 section 2:
+Assignment 2 (section 2):
     * practice event binding.
 
 Lesson 26 (Section 2):
@@ -81,7 +81,7 @@ Lesson 31 (Section 2):
     * `v-bind:` ---> `:`
     * `v-on:` ---> `@`
 
-Assignment 3 section 2:
+Assignment 3 (section 2):
     * practice reactivity with computed and watch.
 
 Lesson 32 (Section 2):
@@ -96,8 +96,9 @@ Lesson 34 (Section 2):
 Lesson 35 (Section 2):
     * dynamic classes: array syntax.
 
-Assignment 4 section 2:
+Assignment 4 (section 2):
     * practice dynamic styling.
 
-Lesson 39 (Section 3):
-    * 
+Lesson 40 (Section 3):
+    * rendering content conditionally;
+    * `v-if`.
