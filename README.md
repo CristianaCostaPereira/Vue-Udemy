@@ -114,3 +114,6 @@ Lesson 43 (Section 3):
 
 Lesson 44 (Section 3):
     * get the index of the item in the array with `v-for`.
+
+Lesson 45 (Section 3):
+    * removing list items.
