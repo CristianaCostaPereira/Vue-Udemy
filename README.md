@@ -110,4 +110,7 @@ Lesson 42 (Section 3):
     * when using `v-show`, intead of `v-if`.
 
 Lesson 43 (Section 3):
-    * rendering lists of data with `v-for`.
+    * rendering lists of data with `v-for` in an array.
+
+Lesson 44 (Section 3):
+    * get the index of the item in the array with `v-for`.
