@@ -148,3 +148,9 @@ Lesson 63:
 
 Lesson 66:
     * lifecycle.
+
+
+### Section 6: Introducing Components
+
+Lesson 69:
+    * components;
