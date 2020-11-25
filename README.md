@@ -142,3 +142,6 @@ Assignment 5:
 Lesson 62:
     * `template` concept;
     * multiple apps concept.
+
+Lesson 63:
+    * working with `refs` (getting a value out of a DOM element).
