@@ -16,3 +16,19 @@ const app = Vue.createApp({
 });
 
 app.mount('#app');
+
+
+const app2 = Vue.createApp({
+  // The template option wants a string, but because I want to write multi-line code, the backticks are used
+  template: `
+    <p>{{ favoriteMeal }}</p>
+  `,
+
+  data() {
+    return {
+      favoriteMeal: 'Pizza'
+    };
+  }
+});
+
+app2.mount('#app2')

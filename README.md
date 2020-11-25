@@ -106,7 +106,7 @@ Assignment 4:
 
 ### Section 3: Rendering Conditional Content & Lists
 
-Lesson 40 (Section 3):
+Lesson 40:
     * rendering content conditionally;
     * `v-if`.
 
@@ -139,5 +139,6 @@ Assignment 5:
 
 ### Section 5: Vue: Behind the Scenes
 
-Lesson 59-60:
-    * introduction to Vue's reactivity;
+Lesson 62:
+    * `template` concept;
+    * multiple apps concept.
