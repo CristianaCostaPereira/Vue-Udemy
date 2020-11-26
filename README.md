@@ -157,3 +157,5 @@ Lesson 69:
 
 Lesson 70-72:
   * use of `components`;
+
+### Section 7: Moving to a Better Development Setuo & Workflow with the Vue CLI
