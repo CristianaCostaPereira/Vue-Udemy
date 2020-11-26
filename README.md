@@ -155,5 +155,5 @@ Lesson 66:
 Lesson 69:
   * components preview;
 
-Lesson 70:
+Lesson 70-72:
   * use of `components`;
