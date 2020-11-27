@@ -166,4 +166,7 @@ Lesson 83:
   * creating a new app.
 
 Lesson 84:
-  * adding components;
+  * adding components.
+
+Lesson 85: 
+  * adding style.
