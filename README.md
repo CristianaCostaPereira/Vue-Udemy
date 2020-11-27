@@ -164,3 +164,6 @@ Lesson 70-72:
 Lesson 83:
   * `Vue CLI`;
   * creating a new app.
+
+Lesson 84:
+  * adding components;
