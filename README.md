@@ -161,6 +161,25 @@ Lesson 70-72:
 
 ### Section 7: Moving to a Better Development Setuo & Workflow with the Vue CLI
 
+From this section on, to run the attached code, follow these steps:
+
+  1. Clone or fork the project:
+  
+    [Here] (https://github.com/CristianaCostaPereira/Vue-Udemy/tree/main/vue-first-app).
+
+  2. Then install all the required packages and dependencies:
+
+    `cd` into your new folder and run:
+```
+npm install
+```
+    This will create a `node_modules` folder.
+  3. Run:
+```
+npm run serve
+```
+  to bring up the development server, view the app at `localhost:8080` (or whichever port is shown in your terminal)
+
 Lesson 83:
   * `Vue CLI`;
   * creating a new app.
@@ -170,3 +189,6 @@ Lesson 84:
 
 Lesson 85: 
   * adding style.
+
+
+### Section 8: Component Communication
