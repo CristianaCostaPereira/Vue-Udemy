@@ -164,8 +164,8 @@ Lesson 70-72:
 From this section on, to run the attached code, follow these steps:
 
   1. Clone or fork the project:
-  
-    [Here] (https://github.com/CristianaCostaPereira/Vue-Udemy/tree/main/vue-first-app).
+
+    [Cristiana Costa Pereira](https://github.com/CristianaCostaPereira/Vue-Udemy/tree/main/vue-first-app) :octocat:
 
   2. Then install all the required packages and dependencies:
 
@@ -174,6 +174,7 @@ From this section on, to run the attached code, follow these steps:
 npm install
 ```
   This will create a `node_modules` folder.
+
   3. Run:
 ```
 npm run serve
