@@ -161,5 +161,6 @@ Lesson 70-72:
 
 ### Section 7: Moving to a Better Development Setuo & Workflow with the Vue CLI
 
-Lesson 77:
+Lesson 83:
   * `Vue CLI`;
+  * creating a new app.
