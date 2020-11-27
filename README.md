@@ -169,11 +169,11 @@ From this section on, to run the attached code, follow these steps:
 
   2. Then install all the required packages and dependencies:
 
-    `cd` into your new folder and run:
+  `cd` into your new folder and run:
 ```
 npm install
 ```
-    This will create a `node_modules` folder.
+  This will create a `node_modules` folder.
   3. Run:
 ```
 npm run serve
