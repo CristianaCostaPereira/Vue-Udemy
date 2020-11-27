@@ -165,7 +165,7 @@ From this section on, to run the attached code, follow these steps:
 
   1. Clone or fork the project:
 
-    [Cristiana Costa Pereira](https://github.com/CristianaCostaPereira/Vue-Udemy/tree/main/vue-first-app) :octocat:
+   vue-first-app :octocat:
 
   2. Then install all the required packages and dependencies:
 
@@ -185,10 +185,8 @@ Lesson 83:
   * `Vue CLI`;
   * creating a new app.
 
-Lesson 84:
+Lesson 84-85:
   * adding components.
-
-Lesson 85: 
   * adding style.
 
 
