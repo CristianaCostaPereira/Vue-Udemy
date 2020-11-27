@@ -163,13 +163,13 @@ Lesson 70-72:
 
 From this section on, to run the attached code, follow these steps:
 
-  1. Clone or fork the project:
+  1. Clone or fork the project named:
 
-   vue-first-app :octocat:
+    vue-first-app :octocat:
 
   2. Then install all the required packages and dependencies:
 
-  `cd` into your new folder and run:
+    `cd` into your new folder and run:
 ```
 npm install
 ```
