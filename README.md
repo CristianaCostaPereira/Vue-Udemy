@@ -191,3 +191,6 @@ Lesson 84-85:
 
 
 ### Section 8: Component Communication
+
+vue-first-app:
+  * `props` (lesson 89) - configure the same component with different data when used multiple times.
