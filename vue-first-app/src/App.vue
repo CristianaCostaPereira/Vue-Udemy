@@ -15,8 +15,7 @@
       <friend-contact
         name="Julie Jones"
         phone-number="09876 543 221"
-        email-adress="julie@localhost.com"
-        is-favorite="0">
+        email-adress="julie@localhost.com">
       </friend-contact>
     </ul>
   </section>

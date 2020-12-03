@@ -16,12 +16,33 @@
 export default {
   // Make Vue aware of the attributes of the props we want to accept on our component
   // Write props as strings and in camel case, becase they will be available just like data properties
-  props: [
-    'name',
-    'phoneNumber',
-    'emailAdress',
-    'isFavorite'
-  ],
+  // props: ['name', 'phoneNumber', 'emailAdress','isFavorite'] for simple apps and when working alone
+  props: {
+    name: {
+      type: String,
+      required: true
+    },
+
+    phoneNumber: {
+      type: String,
+      required: true
+    },
+
+    emailAdress: {
+      type: String,
+      required: true
+    },
+
+    isFavorite: {
+      trype: String,
+      required: false,
+      // When having a non-required prop:
+      default: '0',
+      validator: function (value) {
+        return value === '1' || value === '0';
+      }
+    }
+  },
 
   data() {
     return {
@@ -45,7 +66,8 @@ export default {
       if (this.friendIsFavorite === '1') {
         this.friendIsFavorite = '0';
       } else {
-        this.friendIsFavorite = '1';
+        this.friendIsFavorite
+         = '1';
       }
     }
   },
