@@ -6,16 +6,12 @@
 
     <ul>
       <friend-contact
-        name="Manuel Lorenz"
-        phone-number="01234 5678 991"
-        email-adress="manuel@localhost.com"
-        is-favorite="1">
-      </friend-contact>
-
-      <friend-contact
-        name="Julie Jones"
-        phone-number="09876 543 221"
-        email-adress="julie@localhost.com">
+        v-for="friend in friends"
+        :key="friend.id"
+        :name="friend.name"
+        :phone-number="friend.phone"
+        :email-adress="friend.email"
+        :is-favorite="true">
       </friend-contact>
     </ul>
   </section>
