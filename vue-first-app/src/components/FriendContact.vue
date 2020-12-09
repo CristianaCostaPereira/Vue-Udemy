@@ -1,6 +1,6 @@
 <template>
   <li>
-    <h2>{{ name }} {{ friendIsFavorite ? '(Favorite)' : '' }}</h2>
+    <h2>{{ name }} {{ isFavorite ? '(Favorite)' : '' }}</h2>
 
     <button v-on:click="toggleFavorite">Toggle Favorite</button>
     <button v-on:click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show' }} Details</button>
@@ -18,6 +18,11 @@ export default {
   // Write props as strings and in camel case, becase they will be available just like data properties
   // props: ['name', 'phoneNumber', 'emailAdress','isFavorite'] for simple apps and when working alone
   props: {
+    id: {
+      type: String,
+      required: true
+    },
+    
     name: {
       type: String,
       required: true
@@ -47,7 +52,6 @@ export default {
   data() {
     return {
       detailsAreVisible: false,
-      friendIsFavorite: this.isFavorite
     };
   },
 
@@ -57,14 +61,12 @@ export default {
     },
 
     toggleFavorite() {
-      // Commented because it is no longer a string but a boolean
-      // if (this.friendIsFavorite === '1') {
-      //   this.friendIsFavorite = '0';
-      // } else {
-      //   this.friendIsFavorite
-      //    = '1';
-      // }
-      this.friendIsFavorite = !this.friendIsFavorite;
+      // Built in method, that we can call from inside a Vue component with 'this' and allows to emit our custom event to which we can listen from inside the parent component.
+      // Wants, at least, one ARGUMENT and that is a name we choose, normally, the name of the custom event.
+      // ALWAYS use kebab-case
+      // Every estra argument will be simply be data we pass together with our event
+      // this.id is available because we added a prop named id to our component
+      this.$emit('toggle-favorite', this.id);
     }
   },
 };

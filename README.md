@@ -193,4 +193,6 @@ Lesson 84-85:
 ### Section 8: Component Communication
 
 vue-first-app:
-  * `props` (lesson 89) - configure the same component with different data when used multiple times.
+  * `props` (lesson 89) - configure the same component with different data when used multiple times;
+  * passing data from our app.vue file (parent) into our FriendContact component (child);
+  * `$emit` (lesson 94) - communication from the component to the parent
