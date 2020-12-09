@@ -22,7 +22,7 @@ export default {
       type: String,
       required: true
     },
-    
+
     name: {
       type: String,
       required: true
@@ -48,6 +48,18 @@ export default {
       // }
     }
   },
+
+  emits: ['toggle-favorite'],
+  // emitis: {
+  //   'toggle-favorite': function(id) {
+  //     if (id) {
+  //       return true;
+  //     } else {
+  //       console.warn('ID missing');
+  //       return false;
+  //     }
+  //   }
+  // },
 
   data() {
     return {
