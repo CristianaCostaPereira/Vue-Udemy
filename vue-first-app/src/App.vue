@@ -4,6 +4,8 @@
       <h1>My friends</h1>
     </header>
 
+    <new-friend></new-friend>
+
     <ul>
       <friend-contact
         v-for="friend in friends"
