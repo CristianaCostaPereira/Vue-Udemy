@@ -6,9 +6,18 @@
     <button v-on:click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show' }} Details</button>
 
     <ul v-if="detailsAreVisible">
-      <li><strong>Phone:</strong> {{ phoneNumber }}</li>
-      <li><strong>Email:</strong> {{ emailAdress }}</li>
+      <li>
+        <strong>Phone:</strong>
+        {{ phoneNumber }}
+      </li>
+
+      <li>
+        <strong>Email:</strong>
+        {{ emailAdress }}
+      </li>
     </ul>
+
+    <button @click="deleteFriend">Delete</button>
   </li>
 </template>
 
@@ -49,7 +58,7 @@ export default {
     }
   },
 
-  emits: ['toggle-favorite'],
+  emits: ['toggle-favorite', 'delete'],
   // emitis: {
   //   'toggle-favorite': function(id) {
   //     if (id) {
@@ -79,6 +88,10 @@ export default {
       // Every estra argument will be simply be data we pass together with our event
       // this.id is available because we added a prop named id to our component
       this.$emit('toggle-favorite', this.id);
+    },
+
+    deleteFriend() {
+      this.$emit('delete', this.id); // we could also call $emit directly it in the template
     }
   },
 };
