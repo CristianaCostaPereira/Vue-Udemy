@@ -203,3 +203,4 @@ vue-lesson99-app:
   * tool very useful for letting components communicate.
 
 ### Sectiom 9: Diving Deeper Into Components
+  * lesson 107: local components registration.
