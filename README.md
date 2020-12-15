@@ -204,3 +204,4 @@ vue-lesson99-app:
 
 ### Sectiom 9: Diving Deeper Into Components
   * lesson 107: local components registration.
+  * lesson 108: `scoped` styles.
