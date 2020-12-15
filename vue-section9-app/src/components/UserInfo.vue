@@ -2,7 +2,8 @@
   <section>
     <base-card>
     <!-- v-slot directive is used to let Vue know that the content inside of the template will go to the argument added -->
-      <template v-slot:header>
+    <!-- #header is shorthand for v-slot:header -->
+      <template #header>
         <h3>{{ fullName }}</h3>
         <base-badge
           :type="role"
@@ -10,7 +11,7 @@
         </base-badge>
       </template>
 
-      <template v-slot:default>
+      <template #default>
         <p>{{ infoText }}</p>
       </template>
     </base-card>

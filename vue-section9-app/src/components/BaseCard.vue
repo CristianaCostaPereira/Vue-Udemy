@@ -1,12 +1,24 @@
 <template>
   <div>
-    <header>
-      <slot name="header"></slot>
+    <!-- $slots we can check weather we do receive data for a specific slot and if we don't we could use that info to not render a certain element -->
+    <header v-if="$slots.header">
+      <slot name="header">
+        <!-- <h2>The Default</h2> -->
+      </slot>
     </header>
 
     <slot></slot> <!-- Use our own component as a wrapper around different kinds of HTML content -->
   </div>
 </template>
+
+<script>
+export default {
+  // In the component where we define slots
+  mounted() {
+    console.log(this.$slots.header);
+  }
+}
+</script>
 
 <style scoped>
 section header {

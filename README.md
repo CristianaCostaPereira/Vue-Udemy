@@ -207,3 +207,4 @@ vue-section8-app:
   * lesson 108: `scoped` styles;
   * lesson 109: `slots` - allow us to receive HTML content from outside of the component;
   * lesson 110: `v-slot` directive;
+  * lesson 112: `$slots` and the v-slot: shorthand;
