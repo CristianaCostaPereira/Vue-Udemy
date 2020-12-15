@@ -20,7 +20,7 @@
   </section>
 </template>
 
-<style scoped>
+<style scoped> /* SCOPED tells VUE that the styles defined in here should only affect the template created in this file */
 section h2 {
   margin: 0.5rem 0;
   color: #3a3a3a;

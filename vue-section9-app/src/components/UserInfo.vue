@@ -22,11 +22,3 @@ export default {
   props: ['fullName', 'infoText', 'role'],
 };
 </script>
-
-<style scoped> /* SCOPED tells VUE that the styles defined in here should only affect the template created in this file */
-section header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-</style>
