@@ -197,11 +197,12 @@ vue-first-app:
   * passing data from our app.vue file (parent) into our FriendContact component (child);
   * `$emit` (lesson 94) - communication from the component to the parent
 
-vue-lesson99-app:
-  * avoid passing through components and props unnecessary with `provide` and `inject` to provide data in one place and use it in another place;
+vue-section8-app:
+  * lesson 99: avoid passing through components and props unnecessary with `provide` and `inject` to provide data in one place and use it in another place;
 
   * tool very useful for letting components communicate.
 
 ### Sectiom 9: Diving Deeper Into Components
-  * lesson 107: local components registration.
-  * lesson 108: `scoped` styles.
+  * lesson 107: local components registration;
+  * lesson 108: `scoped` styles;
+  * lesson 109: `slots` - allow us to receive HTML content from outside of the component;
