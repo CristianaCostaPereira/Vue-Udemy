@@ -198,4 +198,4 @@ vue-first-app:
   * `$emit` (lesson 94) - communication from the component to the parent
 
 vue-lesson99-app:
-  * 
+  * avoid passing through components and props unnecessary with `provide` and `inject` to provide data in one place and use it in another place;

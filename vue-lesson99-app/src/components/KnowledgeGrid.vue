@@ -13,7 +13,10 @@
 
 <script>
 export default {
-  props: ['topics'],
+  // inject basically works like props, we reference all the provided data we want to use in this component
+  // in here, because is where we need the 'topics'
+  // We can only inject what has been provided on a higher-up level (a PARENT component or an ancestor component of KnowledgeGrid)
+  inject: ['topics'], 
   emits: ['select-topic']
 };
 </script>
