@@ -10,7 +10,10 @@
     <!-- It is the same as below, but without all of the v-if's -->
     <!-- <component> is our Dynamic component -->
     <!-- it needs the 'is' property to work and tells component which of the components created should be shown -->
-    <component v-bind:is="selectedComponent"></component>  
+    <!-- <keep-alive> tells Vue that components should not be removed and deleted entirely, but, instead, their state should be saved, cached behind the scenes -->
+    <keep-alive>
+      <component v-bind:is="selectedComponent"></component>
+    </keep-alive>
   </div>
 </template>
 
