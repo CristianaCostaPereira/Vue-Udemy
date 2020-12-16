@@ -11,7 +11,7 @@
       <error-alert v-if="inputIsInvalid">
         <h2>Input is invalid!</h2>
         <p>Please enter a few characters</p>
-        <button @click="confirmError">Got it!</button>
+        <button @click="confirmError">Got it 😄 !</button>
       </error-alert>
     </teleport>
   </div>
