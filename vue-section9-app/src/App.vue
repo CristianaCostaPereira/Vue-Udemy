@@ -53,11 +53,11 @@ export default {
 </script>
 
 <style>
-  html {
-    font-family: sans-serif;
-  }
+html {
+  font-family: sans-serif;
+}
 
-  body {
-    margin: 0;
-  }
+body {
+  margin: 0;
+}
 </style>
