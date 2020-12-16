@@ -213,3 +213,4 @@ vue-section8-app:
   * lesson 115: `<keep-alive>` component;
   * lesson 116: build our own alert component;
   * lesson 117: `<teleport>` component;
+  * lesson 118: fragment concept;

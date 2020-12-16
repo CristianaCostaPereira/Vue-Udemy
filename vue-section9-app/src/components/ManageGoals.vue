@@ -1,4 +1,5 @@
 <template>
+<!-- With Vue 3 we dont need to wrap the template in one root level element, this is called FRAGMENTS, but I am going to leave it so I dont get the visual error of the underline -->
   <div>
     <h2>Manage Goals</h2>
     <input type="text" ref="goal" />
