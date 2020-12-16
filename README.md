@@ -202,7 +202,9 @@ vue-section8-app:
 
   * tool very useful for letting components communicate.
 
+
 ### Sectiom 9: Diving Deeper Into Components
+
   * lesson 107: local components registration;
   * lesson 108: `scoped` styles;
   * lesson 109: `slots` - allow us to receive HTML content from outside of the component;
@@ -214,3 +216,8 @@ vue-section8-app:
   * lesson 116: build our own alert component;
   * lesson 117: `<teleport>` component;
   * lesson 118: fragment concept;
+
+
+### Section 10: Course Project: The Learning Resources APP
+
+  * access through: [Cristiana Costa Pereira](https://github.com/CristianaCostaPereira/Resources-App) :octocat:
