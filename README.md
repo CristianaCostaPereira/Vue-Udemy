@@ -209,3 +209,4 @@ vue-section8-app:
   * lesson 110: `v-slot` directive;
   * lesson 112: `$slots` and the v-slot: shorthand;
   * lesson 113: scoped props;
+  * lesson 114: <component> element: dynamic components;
