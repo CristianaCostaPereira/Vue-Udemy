@@ -221,3 +221,6 @@ vue-section8-app:
 ### Section 10: Course Project: The Learning Resources APP
 
   * access through: [Cristiana Costa Pereira](https://github.com/CristianaCostaPereira/Resources-App) :octocat:
+  
+
+### Section 11: Forms
