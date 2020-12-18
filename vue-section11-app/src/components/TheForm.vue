@@ -7,7 +7,7 @@
 
     <div class="form-control">
       <label for="age">Your Age (Years)</label>
-      <input id="age" name="age" type="number" />
+      <input id="age" name="age" type="number" v-model.number="userAge" ref="ageInput" />
     </div>
 
     <div class="form-control">
@@ -66,6 +66,7 @@ export default {
   data() {
     return {
       userName: '',
+      userAge: null // Make it clear that we have no value yet
     }
   },
 
@@ -74,6 +75,12 @@ export default {
     submitForm () {
       console.log('Username: ' + this.userName);
       this.userName = '';
+
+      console.log('User Age:');
+      console.log(this.userAge + 5);
+      console.log(this.$refs.ageInput.value + 5);
+      console.log(31);
+      this.userAge = null;
     },
   },
 }

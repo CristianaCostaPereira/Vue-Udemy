@@ -224,3 +224,4 @@ vue-section8-app:
   
 
 ### Section 11: Forms
+  * v-model and `.number` modifier;
