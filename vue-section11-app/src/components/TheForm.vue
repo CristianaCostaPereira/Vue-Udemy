@@ -12,7 +12,9 @@
 
     <div class="form-control">
       <label for="referrer">How did you hear about us?</label>
-      <select id="referrer" name="referrer">
+
+      <!-- v-model works on <select> just as it does on <input> elements -->
+      <select id="referrer" name="referrer" v-model="referrer">
         <option value="google">Google</option>
         <option value="wom">Word of mouth</option>
         <option value="newspaper">Newspaper</option>
@@ -66,7 +68,8 @@ export default {
   data() {
     return {
       userName: '',
-      userAge: null // Make it clear that we have no value yet
+      userAge: null, // Make it clear that we have no value yet
+      referrer: 'wom'
     }
   },
 
@@ -81,6 +84,9 @@ export default {
       console.log(this.$refs.ageInput.value + 5);
       console.log(31);
       this.userAge = null;
+
+      console.log('referrer: ' + this.referrer);
+      this.referrer = 'wow';
     },
   },
 }

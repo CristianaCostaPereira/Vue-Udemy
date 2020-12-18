@@ -224,4 +224,5 @@ vue-section8-app:
   
 
 ### Section 11: Forms
-  * v-model and `.number` modifier;
+  * lesson 139: v-model and `.number` modifier;
+  * Lesson 140: v-model and dropdowns
