@@ -225,4 +225,5 @@ vue-section8-app:
 
 ### Section 11: Forms
   * lesson 139: v-model and `.number` modifier;
-  * Lesson 140: v-model and dropdowns
+  * lesson 140: v-model and dropdowns;
+  * lesson 141: extract values from checkboxes and radio buttons with v-model and the help of `value` attribute;
