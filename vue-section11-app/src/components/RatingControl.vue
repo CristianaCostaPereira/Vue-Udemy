@@ -1,22 +1,34 @@
 <template>
   <ul>
-    <li :class="{active: activeOption === 'poor'}"><button type="button" @click="activate('poor')">Poor</button></li>
-    <li :class="{active: activeOption === 'average'}"><button type="button" @click="activate('average')">Average</button></li>
-    <li :class="{active: activeOption === 'great'}"><button type="button" @click="activate('great')">Great</button></li>
+    <li :class="{active: modelValue === 'poor'}"><button type="button" @click="activate('poor')">Poor</button></li>
+    <li :class="{active: modelValue === 'average'}"><button type="button" @click="activate('average')">Average</button></li>
+    <li :class="{active: modelValue === 'great'}"><button type="button" @click="activate('great')">Great</button></li>
   </ul>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      activeOption: null
-    };
-  },
+  // We build a custom components and Vue uses this specific prop, if we use v-model on a component, and listen to this very specific event which we can emit in that component
+  props: ['modelValue'],
+
+  emits: ['update:modelValue'],
+
+  // data() {
+  //   return {
+  //     activeOption: this.modelValue // so that TheForm component is able to set our initial value (on the rating property)
+  //   };
+  // },
+
+  // computed: {
+  //   activeOption () {
+  //     return this.modelValue
+  //   }
+  // },
 
   methods: {
     activate(option) {
-      this.activeOption = option;
+      this.$emit('update:modelValue', option);
+
     }
   }
 }
@@ -24,11 +36,11 @@ export default {
 
 <style scoped>
 .active {
-  border-color: #139bb3;
+  border-color: #0fb3b3;
 }
 
 .active button {
-  color: #139bb3;
+  color: #0fb3b3;
 }
 
 ul {

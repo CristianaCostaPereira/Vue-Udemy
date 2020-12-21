@@ -77,7 +77,7 @@
     </div>
 
     <div class="form-control">
-      <rating-control></rating-control>
+      <rating-control v-model="rating"></rating-control>
     </div>
 
     <div class="form-control">
@@ -107,6 +107,7 @@ components: {
       interest: [], // An array because we have multiple checkboxes with the same name, creating, automatically, a group, so Vue adds all the checked elements to the array
       how: null,
       confirm: false, // Single checkbox for a single name value we get true or false
+      rating: null,
       userNameValidation: 'pending'
     }
   },
@@ -137,6 +138,10 @@ components: {
       console.log('Confirm?');
       console.log(this.confirm);
       this.confirm = false;
+
+      console.log('Rating');
+      console.log(this.rating);
+      this.rating = null;
     },
 
     validateInput() {
