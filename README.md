@@ -227,3 +227,4 @@ vue-section8-app:
   * lesson 139: v-model and `.number` modifier;
   * lesson 140: v-model and dropdowns;
   * lesson 141: extract values from checkboxes and radio buttons with v-model and the help of `value` attribute;
+  * lesson 142: basic form validation (with the `blue event`);

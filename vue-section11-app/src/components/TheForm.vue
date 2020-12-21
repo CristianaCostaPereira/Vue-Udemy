@@ -1,8 +1,9 @@
 <template>
   <form @submit.prevent="submitForm">
-    <div class="form-control">
+    <div class="form-control" :class="{invalid: userNameValidation === 'invalid'}">
       <label for="user-name">Your Name</label>
-      <input id="user-name" name="user-name" type="text" v-model="userName" />
+      <input id="user-name" name="user-name" type="text" v-model.trim="userName" @blur="validateInput"/>
+      <p v-if="userNameValidation === 'invalid'">Please enter a valid name!</p>
     </div>
 
     <div class="form-control">
@@ -95,7 +96,8 @@ export default {
       referrer: 'wom',
       interest: [], // An array because we have multiple checkboxes with the same name, creating, automatically, a group, so Vue adds all the checked elements to the array
       how: null,
-      confirm: false // Single checkbox for a single name value we get true or false
+      confirm: false, // Single checkbox for a single name value we get true or false
+      userNameValidation: 'pending'
     }
   },
 
@@ -126,6 +128,14 @@ export default {
       console.log(this.confirm);
       this.confirm = false;
     },
+
+    validateInput() {
+      if (this.userName  === '') {
+        this.userNameValidation = 'invalid';
+      } else {
+        this.userNameValidation = 'valid';
+      }
+    }
   },
 }
 </script>
@@ -142,6 +152,14 @@ form {
 
 .form-control {
   margin: 0.5rem 0;
+}
+
+.form-control.invalid input {
+  border-color: red;
+}
+
+.form-control.invalid label {
+  color: red;
 }
 
 label {
