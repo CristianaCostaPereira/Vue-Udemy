@@ -231,3 +231,4 @@ vue-section8-app:
   * lesson 144: v-model on custom components.
 
 ### Section 12: Sending HTTP Requests
+  * lesson 150: fetch method
