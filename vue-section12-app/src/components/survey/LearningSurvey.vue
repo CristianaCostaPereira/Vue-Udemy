@@ -60,6 +60,11 @@ export default {
         rating: this.chosenRating,
       });
 
+      // Built in method in the browser for sending HTTP requests
+      // fetch is a function that allow us to ALSO SEND data to servers
+      // It takes a URL as a first argument and
+      fetch('https://vue-http-demo-ee864-default-rtdb.firebaseio.com/');
+
       this.enteredName = '';
       this.chosenRating = null;
     },
