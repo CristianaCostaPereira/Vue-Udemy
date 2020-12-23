@@ -46,7 +46,7 @@ export default {
       invalidInput: false,
     };
   },
-  emits: ['survey-submit'],
+  // emits: ['survey-submit'],
   methods: {
     submitSurvey() {
       if (this.enteredName === '' || !this.chosenRating) {
@@ -55,15 +55,28 @@ export default {
       }
       this.invalidInput = false;
 
-      this.$emit('survey-submit', {
-        userName: this.enteredName,
-        rating: this.chosenRating,
-      });
+      // this.$emit('survey-submit', {
+      //   userName: this.enteredName,
+      //   rating: this.chosenRating,
+      // });
 
       // Built in method in the browser for sending HTTP requests
-      // fetch is a function that allow us to ALSO SEND data to servers
-      // It takes a URL as a first argument and
-      fetch('https://vue-http-demo-ee864-default-rtdb.firebaseio.com/');
+      // fetch is a function that, by default, will try to GET data, but ALSO, allow us to SEND data to servers
+      // It takes a URL (we got from FIREBASE) as the first argument and, as required from Firebase, we add a name, after .com/ and .json
+      // The second argument is an object where we can configure our request
+      fetch('https://vue-http-demo-ee864-default-rtdb.firebaseio.com/surveys.json', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json', // Tells the server that we will add some data to this request
+        },
+
+        // JSON.stringify turns our JS object into JSON format
+        body: JSON.stringify ({
+          name: this.enteredName,
+          rating: this.chosenRating
+        })
+
+      });
 
       this.enteredName = '';
       this.chosenRating = null;
