@@ -32,22 +32,33 @@ export default {
   },
 
   methods: {
-    // In this method we wanna send another HTTP request to the server we previosly send our data to (Firebase) . But now to GET data
+    // In this method we wanna send another HTTP request to the server we previously send our data to (Firebase). But now to GET data
     // fetch returns an object on which we can listen for the data once is there, to then set up code that will be executed when that data is there.
     // We set up such listener by adding a THEN method on the result of fetch
     // The THEN method takes a function which will be executed automatically by the browser once the result is there
     // We will also get an argument automatically: the RESPONSE of this resquest (so, the response send back by the server to the browser)
     loadExperiences() {
       fetch('https://vue-http-demo-ee864-default-rtdb.firebaseio.com/surveys.json')
-        .then(function (response) {
+        .then((response) => {
           if (response.ok) {
             return response.json(); // method we want to use for parsing the data that is part os the response
           }
         })
 
         // Here we will get the actual data which response.json yielded
-        .then(function(data) {
-          console.log(data);
+        .then((data) => {
+          const results = [];
+
+          for (const id in data) {
+            results.push({
+              // This is how we are generating a bunch of objects based on the data we are fetching from Firebase and adding that all to our temporary results array
+              id: id,
+              name: data[id].name, // name equal to data for that id
+              rating: data[id].rating
+            });
+          }
+
+          this.results = results;
         });
     },
   },
