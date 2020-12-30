@@ -62,6 +62,12 @@ export default {
         });
     },
   },
+
+  mounted() {
+    // will trigger loadExperiences when this entire component is loaded for the 1st time; when the Vue app is mounted (fully initialized).
+    // will load all the experiences and show them automatically
+    this.loadExperiences();
+  }
 };
 </script>
 
