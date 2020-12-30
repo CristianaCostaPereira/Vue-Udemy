@@ -238,3 +238,4 @@ vue-section8-app:
   * lesson 156: 'Loading' message added;
   * lesson 157: 'No data' message added;
   * lesson 158: handling browser-side errors;
+  * lesson 159: handling error responses;

@@ -29,6 +29,9 @@
         <p
           v-if="invalidInput"
         >One or more input fields are invalid. Please check your provided data.</p>
+
+        <p v-if="error">{{ error }}</p>
+        
         <div>
           <base-button>Submit</base-button>
         </div>
@@ -44,6 +47,7 @@ export default {
       enteredName: '',
       chosenRating: null,
       invalidInput: false,
+      error: null
     };
   },
   // emits: ['survey-submit'],
@@ -60,6 +64,8 @@ export default {
       //   rating: this.chosenRating,
       // });
 
+      this.error = null;
+
       // Built in method in the browser for sending HTTP requests
       // fetch is a function that, by default, will try to GET data, but ALSO, allow us to SEND data to servers
       // It takes a URL (we got from FIREBASE) as the first argument and, as required from Firebase, we add a name, after .com/ and .json
@@ -74,8 +80,17 @@ export default {
         body: JSON.stringify ({
           name: this.enteredName,
           rating: this.chosenRating
-        })
-
+        }),
+      })
+        .then(response => { // this then function will always be triggered if we have a regular response, so if we do not have a technical error (error thrown by the browser)
+          if (response.ok) {
+            // ...
+          } else {
+            throw new Error('Could not save data!'); // The argument passed to the error constructor is the message that will be set for the error. Will automatically reach to our catch() block  
+          }
+      }).catch((error) => {
+        console.log(error);
+        this.error = error.message;
       });
 
       this.enteredName = '';
