@@ -2,10 +2,14 @@
   <section>
     <base-card>
       <h2>Submitted Experiences</h2>
+
       <div>
         <base-button @click="loadExperiences">Load Submitted Experiences</base-button>
       </div>
-      <ul>
+
+      <p v-if="isLoading">Loading ⚙️</p>
+
+      <ul v-else>
         <survey-result
           v-for="result in results"
           :key="result.id"
@@ -27,7 +31,8 @@ export default {
 
   data() {
     return {
-      results: []
+      results: [],
+      isLoading: false
     };
   },
 
@@ -38,6 +43,8 @@ export default {
     // The THEN method takes a function which will be executed automatically by the browser once the result is there
     // We will also get an argument automatically: the RESPONSE of this resquest (so, the response send back by the server to the browser)
     loadExperiences() {
+      this.isLoading = true;
+
       fetch('https://vue-http-demo-ee864-default-rtdb.firebaseio.com/surveys.json')
         .then((response) => {
           if (response.ok) {
@@ -47,6 +54,8 @@ export default {
 
         // Here we will get the actual data which response.json yielded
         .then((data) => {
+          this.isLoading = false;
+
           const results = [];
 
           for (const id in data) {

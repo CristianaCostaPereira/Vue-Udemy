@@ -234,4 +234,5 @@ vue-section8-app:
   * lesson 150: fetch method;
   * lesson 151: sending a `POST` request to store data;
   * lesson 154: getting data (GET request) and transforming response data;
-  * lesson 155: Loading data when a component mounts;
+  * lesson 155: loading data when a component mounts;
+  * lesson 156: 'Loading' message added;
