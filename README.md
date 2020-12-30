@@ -233,3 +233,4 @@ vue-section8-app:
 ### Section 12: Sending HTTP Requests
   * lesson 150: fetch method;
   * lesson 151: sending a `POST` request to store data;
+  * lesson 154: getting data (GET request) and transforming response data;
