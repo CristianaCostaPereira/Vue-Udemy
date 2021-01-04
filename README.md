@@ -1,6 +1,7 @@
 # Vue-Udemy
 The Vue.js course from Udemy - The Complete Guide (with Router, Vuex, Composition API).
 
+
 ### Section 1: Getting Started
 
 Lesson 5
@@ -9,6 +10,7 @@ Lesson 5
 
 Lesson 6
   * re-building the previous app with Vue.
+
 
 ### Section 2: Basics & Core Concepts - DOM Interaction with Vue
 
@@ -199,12 +201,12 @@ vue-first-app:
 
 vue-section8-app:
   * lesson 99: avoid passing through components and props unnecessary with `provide` and `inject` to provide data in one place and use it in another place;
-
   * tool very useful for letting components communicate.
 
 
 ### Sectiom 9: Diving Deeper Into Components
 
+vue-section9-app:
   * lesson 107: local components registration;
   * lesson 108: `scoped` styles;
   * lesson 109: `slots` - allow us to receive HTML content from outside of the component;
@@ -224,13 +226,18 @@ vue-section8-app:
   
 
 ### Section 11: Forms
+
+vue-section11-app:
   * lesson 139: v-model and `.number` modifier;
   * lesson 140: v-model and dropdowns;
   * lesson 141: extract values from checkboxes and radio buttons with v-model and the help of `value` attribute;
   * lesson 142: basic form validation (with the `blue event`);
   * lesson 144: v-model on custom components.
 
+
 ### Section 12: Sending HTTP Requests
+
+vue-section12-app:
   * lesson 150: fetch method;
   * lesson 151: sending a `POST` request to store data;
   * lesson 154: getting data (GET request) and transforming response data;
@@ -239,3 +246,9 @@ vue-section8-app:
   * lesson 157: 'No data' message added;
   * lesson 158: handling browser-side errors;
   * lesson 159: handling error responses;
+
+
+### Section 13: Routing: Building "Multi-Page" Single Page Applications
+
+vue-section13-app:
+  * lesson 164: `npm install --save vue-router@next` (package we can add to our projects to add the routing functionality);
