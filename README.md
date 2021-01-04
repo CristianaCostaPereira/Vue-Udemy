@@ -255,3 +255,4 @@ vue-section13-app:
   * lesson 165: registering and rendering routes and the `router-view` component;
   * lesson 166: navigating with `router-link` component;
   * lesson 167: styling active links;
+  * lesson 168: programmatic navigation with `$router`;
