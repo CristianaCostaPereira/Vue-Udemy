@@ -252,3 +252,4 @@ vue-section12-app:
 
 vue-section13-app:
   * lesson 164: `npm install --save vue-router@next` (package we can add to our projects to add the routing functionality);
+  * lesson 165: registering and rendering routes and the `router-view` component;
