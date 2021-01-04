@@ -3,26 +3,21 @@
     <nav>
       <ul>
         <li>
-          <button @click="setActivePage('teams-list')">Teams</button>
+          <!-- built-in component that comes with vue-router -->
+          <!-- Similar to the anchor tag but this component makes sure that the browser default of loading the page is prevented and the browser does not try to load a different HTML file -->
+          <!-- but instead the router analyzes the value in the ref attribute and checks the route config to find the appropriate Vue component that should be loaded and by doing so, updates the URL -->
+          <!-- Under the hood will render an anchor tag -->
+          <!-- Internally it uses slots so we can pass any HTML element -->
+          <!-- The 'to' prop is its most important configuration -->
+          <router-link to="/teams">Teams</router-link>
         </li>
         <li>
-          <button @click="setActivePage('users-list')">Users</button>
+          <router-link to="/users">Users</router-link>
         </li>
       </ul>
     </nav>
   </header>
 </template>
-
-<script>
-export default {
-  emits: ['set-page'],
-  methods: {
-    setActivePage(page) {
-      this.$emit('set-page', page);
-    },
-  },
-};
-</script>
 
 <style scoped>
 header {
@@ -49,8 +44,8 @@ li {
   margin: 0 2rem;
 }
 
-button {
-  font: inherit;
+a {
+  text-decoration: none;
   background: transparent;
   border: 1px solid transparent;
   cursor: pointer;
@@ -59,8 +54,8 @@ button {
   display: inline-block;
 }
 
-button:hover,
-button:active {
+a:hover,
+a:active {
   color: #f1a80a;
   border-color: #f1a80a;
   background-color: #1a037e;
