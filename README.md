@@ -257,3 +257,4 @@ vue-section13-app:
   * lesson 167: styling active links;
   * lesson 168: programmatic navigation with `$router`;
   * lesson 169: passing data with route params (dynamic segments);
+  * lesson 170: navigation and dynamic paths;
