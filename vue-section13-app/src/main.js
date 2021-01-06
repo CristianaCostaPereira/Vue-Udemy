@@ -17,6 +17,7 @@ const router = createRouter({
     { path: '/teams', component: TeamsList }, // our-domain.com/teams => TeamsList
     { path: '/users', component: UsersList },
     { path: '/teams/:teamId', component: TeamMembers } // Everything that starts with a colon (:) is a dynamic route paramenter and is defined by adding a colon and then the name of our choice. Should became in last, because order matters
+    // For more reusable components we could add the props options and set it to true. This tells Vue-router that the dynamic parameters should be passed in our component as props instead of $route property
   ],
 
   linkActiveClass: 'active' // Change the default CSS classes

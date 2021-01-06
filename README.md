@@ -258,3 +258,4 @@ vue-section13-app:
   * lesson 168: programmatic navigation with `$router`;
   * lesson 169: passing data with route params (dynamic segments);
   * lesson 170: navigation and dynamic paths;
+  * lesson 173: option of passing params as props;
