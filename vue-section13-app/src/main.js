@@ -16,7 +16,7 @@ const router = createRouter({
     // component option is where we define which component should be loaded by the vue-router when the user visits our path ('/teams' in this case)
     { path: '/teams', component: TeamsList }, // our-domain.com/teams => TeamsList
     { path: '/users', component: UsersList },
-    { path: '/teams/:teamId', component: TeamMembers } // This is a dynamic route segment and is defined by adding a colon (:) and then the name of our choice. Should became in last, because order matters
+    { path: '/teams/:teamId', component: TeamMembers } // Everything that starts with a colon (:) is a dynamic route paramenter and is defined by adding a colon and then the name of our choice. Should became in last, because order matters
   ],
 
   linkActiveClass: 'active' // Change the default CSS classes
