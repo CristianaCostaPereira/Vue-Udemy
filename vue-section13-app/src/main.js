@@ -14,9 +14,14 @@ const router = createRouter({
   // Here we register all the routes (URL's) we want to support
   routes: [
     { path: '/', redirect: '/teams' },
-    { path: '/teams', component: TeamsList },
+    {
+      path: '/teams',
+      component: TeamsList,
+      children: [
+        { path: ':teamId', component: TeamMembers }, // Dynamic route paramenter
+      ]
+    },
     { path: '/users', component: UsersList },
-    { path: '/teams/:teamId', component: TeamMembers }, // Dynamic route paramenter
     { path: '/:notFound(.*)', component: NotFound }
   ],
 

@@ -260,3 +260,4 @@ vue-section13-app:
   * lesson 170: navigation and dynamic paths;
   * lesson 173: option of passing params as props;
   * lesson 174: `redirect` and `alias` properties, "catch all" routes and handle invalid input's;
+  * lesson 175: nested routes - `children` option;
