@@ -263,3 +263,5 @@ vue-section13-app:
   * lesson 175: nested routes - `children` option;
   * lesson 176: `name` and `params` property;
   * lesson 177: `query` property;
+  * lesson 178: multiple routes with named router views;
+  * lesson 179: controlling scroll behaviour;

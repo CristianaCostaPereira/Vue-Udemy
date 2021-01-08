@@ -35,11 +35,20 @@ const router = createRouter({
       path: '/users',
       components: { default: UsersList, footer: UsersFooter }
     },
-    
+
     { path: '/:notFound(.*)', component: NotFound }
   ],
 
-  linkActiveClass: 'active' // Change the default CSS classes
+  linkActiveClass: 'active', // Change the default CSS classes
+
+  scrollBehavior(to, from, savedPosition) {
+    console.log(to, from, savedPosition);
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { left: 0, top: 0 }; // Means we want to scroll to the top of the page
+    }
+  }
 });
 
 const app = createApp(App)
