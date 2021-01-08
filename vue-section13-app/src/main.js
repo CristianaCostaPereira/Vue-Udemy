@@ -6,6 +6,9 @@ import TeamsList from './components/teams/TeamsList.vue';
 import UsersList from './components/users/UsersList.vue';
 import TeamMembers from './components/teams/TeamMembers.vue';
 import NotFound from './components/nav/NotFound.vue';
+import TeamsFooter from './components/teams/TeamsFooter.vue';
+import UsersFooter from './components/users/UsersFooter.vue';
+
 
 const router = createRouter({
   // Tells the router how to manage the routing history in our app
@@ -14,15 +17,25 @@ const router = createRouter({
   // Here we register all the routes (URL's) we want to support
   routes: [
     { path: '/', redirect: '/teams' },
+
     {
       name: 'teams',
       path: '/teams',
-      component: TeamsList,
+      components: { default: TeamsList, footer: TeamsFooter },
       children: [
-        { name: 'team-members', path: ':teamId', component: TeamMembers },
+        {
+          name: 'team-members',
+          path: ':teamId',
+          component: TeamMembers
+        }
       ]
     },
-    { path: '/users', component: UsersList },
+
+    {
+      path: '/users',
+      components: { default: UsersList, footer: UsersFooter }
+    },
+    
     { path: '/:notFound(.*)', component: NotFound }
   ],
 
