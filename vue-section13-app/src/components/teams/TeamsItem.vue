@@ -12,7 +12,12 @@ export default {
 
   computed: {
     teamMembersLink() {
-      return '/teams/' + this.id; // generated URL
+      // return '/teams/' + this.id; // generated URL
+      return { name: 'team-members', params: { teamId: this.id } };
+
+      // Side Note: in case we should be navigating programatically:
+      // this.$router.push({ name: 'team-members', params: { teamId: this.id } });
+
     }
   }
 };
