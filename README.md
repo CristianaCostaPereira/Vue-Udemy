@@ -262,3 +262,4 @@ vue-section13-app:
   * lesson 174: `redirect` and `alias` properties, "catch all" routes and handle invalid input's;
   * lesson 175: nested routes - `children` option;
   * lesson 176: `name` and `params` property;
+  * lesson 177: `query` property;

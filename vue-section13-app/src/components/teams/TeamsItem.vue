@@ -13,11 +13,14 @@ export default {
   computed: {
     teamMembersLink() {
       // return '/teams/' + this.id; // generated URL
-      return { name: 'team-members', params: { teamId: this.id } };
+      return { 
+        name: 'team-members',
+        params: { teamId: this.id },
+        query: { sort: 'asc' }
+      };
 
       // Side Note: in case we should be navigating programatically:
       // this.$router.push({ name: 'team-members', params: { teamId: this.id } });
-
     }
   }
 };

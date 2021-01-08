@@ -48,6 +48,10 @@ export default {
 
     this.teamName = selectedTeam.name;
     this.members = selectedMembers;
+
+    // How we get access to the query parameters we might passing to a component through routing
+    // query parameters are not provided as props they are just accessible through $route
+    console.log(this.$route.query);
   },
 };
 </script>
