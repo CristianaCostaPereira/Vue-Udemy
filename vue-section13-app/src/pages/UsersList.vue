@@ -40,11 +40,11 @@ export default {
 
   // Navigational guard: component level
   // It will be called before navigation to this component is confirmed
-  // beforeRouteEnter(to, from, next) {
-  //   console.log('UsersList component beforeRouteEnter');
-  //   console.log(to, from);
-  //   next
-  // },
+  beforeRouteEnter(to, from, next) {
+    console.log('UsersList component beforeRouteEnter');
+    console.log(to, from);
+    next();
+  },
 
   // The router will call this first before calling all the others beforeEach an beforeEnter guards
   // Navigational guard that makes sure the user do not leave the page accidentally and lose their input

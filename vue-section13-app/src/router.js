@@ -24,6 +24,7 @@ const router = createRouter({
         {
           name: 'team-members',
           path: ':teamId',
+          props: true,
           component: TeamMembers
         }
       ]
