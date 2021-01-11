@@ -1,6 +1,7 @@
 <template>
   <div>
     <button @click="confirmInput">Confirm</button>
+    <button @click="saveChanges">Save changes</button>
     <ul>
       <user-item v-for="user in users" :key="user.id" :name="user.fullName" :role="user.role"></user-item>
     </ul>
@@ -17,6 +18,10 @@ export default {
 
   inject: ['users'],
 
+  data() {
+    return { changesSaved: false };
+  },
+
   methods: {
     confirmInput() {
       // does something
@@ -26,6 +31,10 @@ export default {
       // .push() for navigating programatically, to add a new route to this routing memory the browser keeps
       // .push() takes a string with the path we want to go
       this.$router.push('/teams');
+    },
+
+    saveChanges() {
+      this.changesSaved = true;
     }
   },
 
@@ -36,6 +45,25 @@ export default {
   //   console.log(to, from);
   //   next
   // },
+
+  // The router will call this first before calling all the others beforeEach an beforeEnter guards
+  // Navigational guard that makes sure the user do not leave the page accidentally and lose their input
+  beforeRouteLeave(to, from, next) {
+    console.log('UserList component beforeRouteLeave');
+    console.log(to, from);
+
+    if (this.changesSaved) {
+      next();
+    } else {
+      const userWantsToLeave = confirm('Are you sure? You got unsaved changes!');
+      next(userWantsToLeave);
+    }
+  },
+
+  // this will be executed whenever we leave the user's page
+  unmounted() {
+    console.log('unmounted');
+  }
 };
 </script>
 

@@ -266,3 +266,4 @@ vue-section13-app:
   * lesson 178: multiple routes with named router views;
   * lesson 179: controlling scroll behaviour;
   * lesson 180-182: navigation guards;
+  * lesson 183: route leave guards: `beforeRouteLeave`;
