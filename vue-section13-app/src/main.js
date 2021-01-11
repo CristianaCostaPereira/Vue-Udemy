@@ -65,6 +65,13 @@ router.beforeEach(function(to, from, next) {
   next(); // confirm the navigation 
 });
 
+// Does NOT have the next argument because it will only run once a navigation has been confirmed
+// Good for sending analytics data
+router.afterEach(function(to, from) {
+  console.log('Global afterEach');
+  console.log(to, from);
+});
+
 const app = createApp(App)
 
 // .use makes our Vue app aware of this router

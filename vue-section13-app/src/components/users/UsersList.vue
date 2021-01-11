@@ -24,18 +24,18 @@ export default {
       // Special property available in our component config object because we added the router package (router is used in our Vue app)
       // Triggers the navigation from inside the JS code from inside our component config object programatically
       // .push() for navigating programatically, to add a new route to this routing memory the browser keeps
-      // .push() takes a string with has the path we want to go
+      // .push() takes a string with the path we want to go
       this.$router.push('/teams');
     }
   },
 
   // Navigational guard: component level
   // It will be called before navigation to this component is confirmed
-  beforeRouteEnter(to, from, next) {
-    console.log('UsersList component beforeRouteEnter');
-    console.log(to, from);
-    next
-  },
+  // beforeRouteEnter(to, from, next) {
+  //   console.log('UsersList component beforeRouteEnter');
+  //   console.log(to, from);
+  //   next
+  // },
 };
 </script>
 

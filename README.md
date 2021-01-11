@@ -265,4 +265,4 @@ vue-section13-app:
   * lesson 177: `query` property;
   * lesson 178: multiple routes with named router views;
   * lesson 179: controlling scroll behaviour;
-  * lesson 180-181: navigation guards;
+  * lesson 180-182: navigation guards;
