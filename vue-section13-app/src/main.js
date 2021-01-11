@@ -21,6 +21,7 @@ const router = createRouter({
     {
       name: 'teams',
       path: '/teams',
+      meta: { needsAuth: true },
       components: { default: TeamsList, footer: TeamsFooter },
       children: [
         {
@@ -62,7 +63,12 @@ const router = createRouter({
 router.beforeEach(function(to, from, next) {
   console.log('Global beforeEach');
   console.log(to, from);
-  next(); // confirm the navigation 
+  if (to.meta.needsAuth) {
+    console.log('Needs Authentication');
+    next();
+  } else {
+    next(); // confirm the navigation
+  }
 });
 
 // Does NOT have the next argument because it will only run once a navigation has been confirmed
