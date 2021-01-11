@@ -51,6 +51,13 @@ const router = createRouter({
   }
 });
 
+// Useful if we want to check whether the user is authenticated and prevent access to a certain page if not authenticated
+router.beforeEach(function(to, from, next) {
+  console.log('Global beforeEach');
+  console.log(to, from);
+  next(); // confirm the navigation 
+});
+
 const app = createApp(App)
 
 // .use makes our Vue app aware of this router
