@@ -27,7 +27,15 @@ export default {
       // .push() takes a string with has the path we want to go
       this.$router.push('/teams');
     }
-  }
+  },
+
+  // Navigational guard: component level
+  // It will be called before navigation to this component is confirmed
+  beforeRouteEnter(to, from, next) {
+    console.log('UsersList component beforeRouteEnter');
+    console.log(to, from);
+    next
+  },
 };
 </script>
 

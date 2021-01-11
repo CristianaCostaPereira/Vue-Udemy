@@ -33,7 +33,14 @@ const router = createRouter({
 
     {
       path: '/users',
-      components: { default: UsersList, footer: UsersFooter }
+      components: { default: UsersList, footer: UsersFooter },
+
+      // Navigational guard: route level
+      beforeEnter(to,from, next) {
+        console.log('users beforeEnter');
+        console.log(to, from);
+        next();
+      }
     },
 
     { path: '/:notFound(.*)', component: NotFound }
@@ -51,7 +58,7 @@ const router = createRouter({
   }
 });
 
-// Useful if we want to check whether the user is authenticated and prevent access to a certain page if not authenticated
+// Global navigational guard: useful if we want to check whether the user is authenticated and prevent access to a certain page if not authenticated
 router.beforeEach(function(to, from, next) {
   console.log('Global beforeEach');
   console.log(to, from);

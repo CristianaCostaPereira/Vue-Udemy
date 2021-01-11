@@ -53,6 +53,14 @@ export default {
     // query parameters are not provided as props they are just accessible through $route
     console.log(this.$route.query);
   },
+  
+  // Vue will call this method whenever this component is about to be reused with new data because the route changes
+  // beforeRouteUpdate(to, from, next) {
+  //   console.log('kddjdofnd');
+  //   console.log(to, from);
+  //   this.loadTeamMembers(to.params.teamId);
+  //   next();
+  // }
 };
 </script>
 
