@@ -28,7 +28,7 @@ export default {
 
       // Special property available in our component config object because we added the router package (router is used in our Vue app)
       // Triggers the navigation from inside the JS code from inside our component config object programatically
-      // .push() for navigating programatically, to add a new route to this routing memory the browser keeps
+      // .push() for navigating PROGRAMATICALLY, to add a new route to this routing memory the browser keeps
       // .push() takes a string with the path we want to go
       this.$router.push('/teams');
     },
@@ -73,5 +73,20 @@ ul {
   margin: 2rem auto;
   max-width: 20rem;
   padding: 0;
+}
+
+button {
+  cursor: pointer;
+  color: rgb(70, 61, 61);
+  padding: 2px 3px;
+  margin: 5px 4px;
+  border-radius: 4px;
+}
+
+button:hover,
+button:active {
+  color: #f1a80a;
+  border-color: #070708;
+  background-color: #2047d6eb;
 }
 </style>
