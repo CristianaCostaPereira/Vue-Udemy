@@ -63,11 +63,12 @@ export default {
     }
   },
   
-  // Vue will call this method whenever this component is about to be reused with new data because the route changes
+  // Vue will call this method whenever this component is about to be reused with new data because the route changed
+  // Can be an alternative to watch the teamId prop
   beforeRouteUpdate(to, from, next) {
     console.log('TeamMembers Component beforeRouteUpdate');
     console.log(to, from);
-    this.loadTeamMembers(to.params.teamId);
+    // this.loadTeamMembers(to.params.teamId); // Commented because we are already loading teamMembers when the teamId changes
     next();
   }
 };

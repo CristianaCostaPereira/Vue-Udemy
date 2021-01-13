@@ -50,7 +50,7 @@ const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
     console.log(to, from, savedPosition);
     if (savedPosition) {
-      return savedPosition;
+      return savedPosition; // If we go back we use the savedPosition instead of jumping to the top of the page
     } else {
       return { left: 0, top: 0 }; // Means we want to scroll to the top of the page
     }
@@ -62,7 +62,7 @@ router.beforeEach(function(to, from, next) {
   console.log('Global beforeEach');
   console.log(to, from);
   if (to.meta.needsAuth) {
-    console.log('Needs Authentication');
+    console.log('Needs Authentication!');
     next();
   } else {
     next(); // confirm the navigation
