@@ -268,3 +268,9 @@ vue-section13-app:
   * lesson 180-182: navigation guards;
   * lesson 183: route leave guards: `beforeRouteLeave`;
   * lesson 184: route metadata;
+
+
+  ### Section 14: Animations and Trasitions
+
+  vue-section14-app:
+    * lesson 189: basic animation with CSS transistions;

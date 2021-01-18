@@ -1,26 +1,40 @@
 <template>
-  <div class="container">
-    <div class="block"></div>
-    <button>Animate</button>
-  </div>
-  <base-modal @close="hideDialog" v-if="dialogIsVisible">
-    <p>This is a test dialog!</p>
-    <button @click="hideDialog">Close it!</button>
-  </base-modal>
-  <div class="container">
-    <button @click="showDialog">Show Dialog</button>
-  </div>
+  <div>
+    <div class="container">
+      <!-- When animatedBlock is true the animate class will be added  -->
+      <div class="block" :class="{animate: animatedBlock}"></div>
+      <button @click="animateBlock">Animate</button>
+    </div>
+
+    <base-modal @close="hideDialog" v-if="dialogIsVisible">
+      <p>This is a test dialog!</p>
+      <button @click="hideDialog">Close it!</button>
+    </base-modal>
+
+    <div class="container">
+      <button @click="showDialog">Show Dialog</button>
+    </div>
+</div>
 </template>  
 
 <script>
 export default {
   data() {
-    return { dialogIsVisible: false };
+    return {
+      animatedBlock: false,
+      dialogIsVisible: false
+      };
   },
+
   methods: {
+    animateBlock() {
+      this.animatedBlock = true;
+    },
+
     showDialog() {
       this.dialogIsVisible = true;
     },
+
     hideDialog() {
       this.dialogIsVisible = false;
     },
@@ -57,6 +71,7 @@ button:active {
   height: 8rem;
   background-color: #290033;
   margin-bottom: 2rem;
+  transition: transform 0.3s ease-out; /* Name of the property we want to animate, its durantion and his accelaration */
 }
 .container {
   max-width: 40rem;
@@ -68,5 +83,9 @@ button:active {
   padding: 2rem;
   border: 2px solid #ccc;
   border-radius: 12px;
+}
+
+.animate {
+  transform: translateX(-150px); /* Move elements around in an optimazed way */
 }
 </style>
