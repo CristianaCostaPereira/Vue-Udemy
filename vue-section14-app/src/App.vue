@@ -1,9 +1,18 @@
 <template>
   <div>
     <div class="container">
-      <!-- When animatedBlock is true the animate class will be added  -->
+      <!-- When animatedBlock is true the animate class will be added -->
       <div class="block" :class="{animate: animatedBlock}"></div>
       <button @click="animateBlock">Animate</button>
+    </div>
+
+    <div class="container">
+      <!-- transition will manipulate our wrapped element so we will be able to control the apperance and remocal animation with Vue -->
+      <!-- transition MUST only contain ONE direct child element -->
+      <transition>
+        <p v-if="paragraphIsVisible">This is only sometimes visible...</p>
+      </transition>
+        <button @click="toggleParagraph">Toggle paragraph</button>
     </div>
 
     <base-modal @close="hideDialog" v-if="dialogIsVisible">
@@ -22,13 +31,18 @@ export default {
   data() {
     return {
       animatedBlock: false,
-      dialogIsVisible: false
+      dialogIsVisible: false,
+      paragraphIsVisible: false
       };
   },
 
   methods: {
     animateBlock() {
       this.animatedBlock = true;
+    },
+
+    toggleParagraph() {
+      this.paragraphIsVisible = !this.paragraphIsVisible;
     },
 
     showDialog() {
