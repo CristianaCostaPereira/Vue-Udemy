@@ -71,7 +71,7 @@ button:active {
   height: 8rem;
   background-color: #290033;
   margin-bottom: 2rem;
-  transition: transform 0.3s ease-out; /* Name of the property we want to animate, its durantion and his accelaration */
+  /* transition: transform 0.3s ease-out; Name of the property we want to animate, its durantion and his accelaration */
 }
 .container {
   max-width: 40rem;
@@ -86,6 +86,22 @@ button:active {
 }
 
 .animate {
-  transform: translateX(-150px); /* Move elements around in an optimazed way */
+  /* transform: translateX(-150px); Move elements around in an optimazed way */
+  animation: slide-fade 0.3s ease-out forwards ;
+}
+
+/* Define in detail how animation should behave */
+@keyframes slide-fade {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+
+  70% {
+    transform: translateX(-120px) scale(1.1);
+  }
+
+  100% {
+    transform: translateX(-150px) scale(1);
+  }
 }
 </style>

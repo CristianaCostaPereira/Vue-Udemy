@@ -274,3 +274,4 @@ vue-section13-app:
 
   vue-section14-app:
     * lesson 189: basic animation with CSS transistions;
+    * lesson 190: `@keyframes`;
