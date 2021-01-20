@@ -279,3 +279,4 @@ vue-section13-app:
     * lesson 195: custom CSS classes names;
     * lesson 196: animating a modal;
     * lesson 197: `mode` prop and transitioning between multiple elements;
+    * lesson 198: transition events;

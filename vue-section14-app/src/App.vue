@@ -8,7 +8,15 @@
 
     <div class="container">
       <!-- transition will manipulate our wrapped element so we will be able to animate (control) the apperance and removal of HTML elements with Vue -->
-      <transition name="paragraph">
+      <transition
+        name="paragraph"
+        @before-enter="beforeEnter"
+        @enter="enter"
+        @after-enter="afterEnter"
+        @before-leave="beforeLeave"
+        @leave="leave"
+        @after-leave="afterLeave"
+      >
         <p v-if="paragraphIsVisible">This is only sometimes visible...</p>
       </transition>
         <button @click="toggleParagraph">Toggle paragraph</button>
@@ -48,6 +56,39 @@ export default {
   methods: {
     animateBlock() {
       this.animatedBlock = true;
+    },
+
+    // Executes when the enter animation starts (when .paragraph-enter-from is being added)
+    beforeEnter(el) {
+      console.log('beforeEnter');
+      console.log(el);
+    },
+
+    enter(el) {
+      console.log('enter');
+      console.log(el)
+    },
+
+    // Only call when the animation finishes
+    afterEnter(el) {
+      console.log('afterEnter');
+      console.log(el);
+    },
+
+    // When the element is leaving the DOM
+    beforeLeave(el) {
+      console.log('beforeLeave');
+      console.log(el);
+    },
+
+    leave(el) {
+      console.log('leave');
+      console.log(el);
+    },
+
+    afterLeave(el) {
+      console.log('afterLeave');
+      console.log(el);
     },
 
     toggleParagraph() {
@@ -131,7 +172,7 @@ button:active {
 .paragraph-enter-active {
   /* Tells Vue to watch for all CSS properties that might be animated (in this case opacity, transform) */
   /* For how long the classes should be added to the element */
-  transition: all 0.3s ease-out;
+  transition: all 2s ease-out;
 }
 
 .paragraph-enter-to {
