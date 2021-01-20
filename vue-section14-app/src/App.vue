@@ -8,11 +8,19 @@
 
     <div class="container">
       <!-- transition will manipulate our wrapped element so we will be able to animate (control) the apperance and removal of HTML elements with Vue -->
-      <!-- transition MUST only contain ONE direct child element -->
       <transition name="paragraph">
         <p v-if="paragraphIsVisible">This is only sometimes visible...</p>
       </transition>
         <button @click="toggleParagraph">Toggle paragraph</button>
+    </div>
+
+    <!-- This is the exception were we are allowed to have more than one direct child element inside of the transition component -->
+    <!-- EXCEPTION: if of the child elements we have in our transition we garantee that ONLY one is added to the real DOM at the same time -->
+    <div class="container">
+      <transition name="fade-button" mode="out-in">
+        <button @click="showUsers" v-if="!usersAreVisible">Show Users 👩‍💼</button>
+        <button @click="hideUsers" v-else>Hide Users  👤</button>
+      </transition>  
     </div>
 
     <base-modal @close="hideDialog" :open="dialogIsVisible">
@@ -32,7 +40,8 @@ export default {
     return {
       animatedBlock: false,
       dialogIsVisible: false,
-      paragraphIsVisible: false
+      paragraphIsVisible: false,
+      usersAreVisible: false
       };
   },
 
@@ -43,6 +52,14 @@ export default {
 
     toggleParagraph() {
       this.paragraphIsVisible = !this.paragraphIsVisible;
+    },
+
+    showUsers() {
+      this.usersAreVisible = true;
+    },
+
+    hideUsers() {
+      this.usersAreVisible = false;
     },
 
     showDialog() {
@@ -135,6 +152,24 @@ button:active {
 .paragraph-leave-to {
   opacity: 0;
   transform: translateY(30px);
+}
+
+.fade-button-enter-from,
+.fade-button-leave-to {
+  opacity: 0;
+}
+
+.fade-button-enter-active {
+  transition: opacity 0.3s ease-out;
+}
+
+.fade-button-leave-active {
+  transition: opacity 0.3s ease-in;
+}
+
+.fade-button-enter-to,
+.fade-button-leave-from {
+  opacity: 1;
 }
 
 /* Define in detail how animation should behave */
