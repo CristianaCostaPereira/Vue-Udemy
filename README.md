@@ -277,3 +277,4 @@ vue-section13-app:
     * lesson 190: `@keyframes`;
     * lesson 192-193: `<transition>` component;
     * lesson 195: custom CSS classes names;
+    * lesson 196: animating a modal;
