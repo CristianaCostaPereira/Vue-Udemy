@@ -280,4 +280,4 @@ vue-section13-app:
     * lesson 196: animating a modal;
     * lesson 197: `mode` prop and transitioning between multiple elements;
     * lesson 198: transition events;
-    * lesson 199: building animations with JS transitions instead of CSS;
+    * lesson 199-200: building animations with JS transitions instead of CSS and disabling CSS transitions (`css` prop);

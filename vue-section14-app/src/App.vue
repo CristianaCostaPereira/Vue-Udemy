@@ -9,7 +9,7 @@
     <div class="container">
       <!-- transition will manipulate our wrapped element so we will be able to animate (control) the apperance and removal of HTML elements with Vue -->
       <transition
-        name="paragraph"
+        :css="false"
         @before-enter="beforeEnter"
         @enter="enter"
         @after-enter="afterEnter"
