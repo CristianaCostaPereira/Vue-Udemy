@@ -1,61 +1,15 @@
 <template>
-  <div>
-    <div class="container">
-      <users-list></users-list>
-    </div>
-
-    <div class="container">
-      <!-- When animatedBlock is true the animate class will be added -->
-      <div class="block" :class="{animate: animatedBlock}"></div>
-      <button @click="animateBlock">Animate</button>
-    </div>
-
-    <div class="container">
-      <!-- transition will manipulate our wrapped element so we will be able to animate (control) the apperance and removal of HTML elements with Vue -->
-      <transition
-        :css="false"
-        @before-enter="beforeEnter"
-        @enter="enter"
-        @after-enter="afterEnter"
-        @before-leave="beforeLeave"
-        @leave="leave"
-        @after-leave="afterLeave"
-        @enter-cancelled="enterCancelled"
-        @leave-cancelled="leaveCancelled"
-      >
-        <p v-if="paragraphIsVisible">This is only sometimes visible...</p>
-      </transition>
-        <button @click="toggleParagraph">Toggle paragraph</button>
-    </div>
-
-    <!-- This is the exception were we are allowed to have more than one direct child element inside of the transition component -->
-    <!-- EXCEPTION: if of the child elements we have in our transition we garantee that ONLY one is added to the real DOM at the same time -->
-    <div class="container">
-      <transition name="fade-button" mode="out-in">
-        <button @click="showUsers" v-if="!usersAreVisible">Show Users 👩‍💼</button>
-        <button @click="hideUsers" v-else>Hide Users  👤</button>
-      </transition>  
-    </div>
-
-    <base-modal @close="hideDialog" :open="dialogIsVisible">
-      <p>This is a test dialog!</p>
-      <button @click="hideDialog">Close it!</button>
-    </base-modal>
-
-    <div class="container">
-      <button @click="showDialog">Show Dialog</button>
-    </div>
-</div>
-</template>  
+  <router-view v-slot="slotProps">
+    <transition name="fade-button" mode="out-in">
+      <!-- slotProps have a property named Component, with 'C', which holds the component that should be loaded for the currently selected route -->
+      <component :is="slotProps.Component"></component>
+    </transition>
+  </router-view>
+</template>
 
 <script>
-import UsersList from './components/UsersList.vue';
 
 export default {
-  components: {
-    UsersList
-  },
-
   data() {
     return {
       animatedBlock: false,
@@ -228,6 +182,14 @@ button:active {
 .fade-button-enter-to,
 .fade-button-leave-from {
   opacity: 1;
+}
+
+.route-enter-active {
+  animation: slide-scale 0.4s ease-out;
+}
+
+.route-leave-active {
+  animation: slide-scale 0.4s ease-in
 }
 
 /* Define in detail how animation should behave */

@@ -283,3 +283,4 @@ vue-section13-app:
     * lesson 199-200: building animations with JS transitions instead of CSS and disabling CSS transitions (`css` prop);
     * lesson 201-202: animating lists with `tansition-group`;
     * lesson 203: animate list item movement with the special CSS class `move`;
+    * lesson 204: animating route changes;
