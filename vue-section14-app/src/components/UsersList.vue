@@ -55,6 +55,10 @@ li {
   text-align: center;
 }
 
+input {
+  margin-right: 5px;
+}
+
 .user-list-enter-from {
   opacity: 0;
   transform: translateX(-30px);
@@ -71,11 +75,18 @@ li {
 }
 
 .user-list-leave-active {
-  transition: all 1s ease-in; 
+  transition: all 1s ease-in;
+  position: absolute;
 }
 
 .user-list-leave-to {
   opacity: 0;
   transform: translateX(30px);
+}
+
+/* Allow us to control the animation of all the other elements which are not getting added or removed, but might need to move around to make place for the new element or to fill up the space of the leaving element */
+/* Vue wil automatically move then, behind the scenes, to their new position by using the transform CSS property */
+.user-list-move {
+  transition: transform 0.8s ease;
 }
 </style>
