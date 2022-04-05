@@ -16,26 +16,26 @@
       <div>
         <label for="goal">Goal</label>
         <!-- Connects enteredValue with the input by adding the v-model directive on the input, a special HTML attribute that is only understood by Vue -->  
-        <!-- This will stablish a connection between this input ans the value being enteres there and the data property in the Vue object -->  
-        <input type="text" id="goal" v-model="enteredValue" />
+        <!-- This will stablish a connection between this input and the value being entered there and the data property in the Vue object -->  
+        <input type="text" id="goal" v-model="enteredValue" @keyup.enter="addGoal()"/>
 
         <!-- Now addGoal should be triggered whenever the button is clicked -->
         <!-- v-on attributte and then the name of the event we wanna listen and then, as a value, specify the name of the method that should be triggered when the item is clicked -->
-        <!-- With this, Vue will make sure that addGoal gets executed whenever this button is clicked and the automatically gives the current entered value and add it as a new value to goals -->
+        <!-- With this, Vue will make sure that addGoal gets executed whenever this button is clicked and then automatically gives the current entered value and add it as a new value to goals -->
         <button v-on:click="addGoal">Add Goal</button>
       </div>
 
       <ul>
         <!-- Creates one list item per goal -->
         <!-- v-for replicates an element multiples times-->
-        <!-- "goal in goals" to in the end loop through all our goals in the data object and create ane list item per goal-->
-        <!-- now we can output this goal with the double curly braces syntax, replicating the list items as often as needed and then output one goal per goal entry that we have in the goals array-->
+        <!-- "goal in goals" to in the end loop through all our goals in the data object and create one list item per goal-->
+        <!-- Now we can output this goal with the double curly braces syntax, replicating the list items as often as needed and then output one goal per goal entry that we have in the goals array-->
         <li v-for="goal in goals">{{ goal }}</li>
       </ul>
     </div>
 
     <!-- It will allow my script to use Vue -->  
-    <!-- Place it before my script -->  
+    <!-- Place it before my script ; before we execute app.js-->  
     <script src="https://unpkg.com/vue@next"></script>
     <script src="app.js"></script>
   </body>
