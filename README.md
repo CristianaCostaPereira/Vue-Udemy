@@ -16,8 +16,8 @@ Lesson 6
 
 Lesson 14-16:
   * class 14 - creating and connecting Vue App instances;
-  * class 15 - interpolation and data binging;
-  * class 16 - binding attributes with the `v-bind` directive.
+  * class 15 - interpolation and data binding;
+  * class 16 - binding attributes with the `v-bind` directive (The alternative to interpolation).
 
 Lesson 17
   * added a bit dynamism to the app (whenever it is reloaded, randomly changes the text content);
