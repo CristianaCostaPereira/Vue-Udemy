@@ -14,19 +14,19 @@ Lesson 6
 
 ### Section 2: Basics & Core Concepts - DOM Interaction with Vue
 
-Lesson 13-15:
-  * class 13 - creating and connecting Vue App instances;
-  * class 14 - interpolation and data binging;
-  * class 15 - binding attributes with the `v-bind` directive.
+Lesson 14-16:
+  * class 14 - creating and connecting Vue App instances;
+  * class 15 - interpolation and data binging;
+  * class 16 - binding attributes with the `v-bind` directive.
 
-Lesson 16
+Lesson 17
   * added a bit dynamism to the app (whenever it is reloaded, randomly changes the text content);
   * understanding "methods" in Vue apps.
 
-Lesson 17:
+Lesson 18:
   * working with data inside of a Vue app.
 
-Lesson 18:
+Lesson 19:
   * outputting raw HTML content with `v-html`;
   * not needed to often, and should not be used as a default because we can introduce security issues because we basically circumvent the built in cross site scripting attack protection we have with the double curly braces.
 

@@ -2,12 +2,12 @@
 // We use Vue features by passing an object to creatApp
 // This is the object that we can use to configure our app
 const app = Vue.createApp({
-    data() {
-        return {
-            courseGoal: 'Master Vue 😄 !',
-            vueLink: 'https://vuejs.org/'
-        };
-    }
+  data() {
+    return {
+      courseGoal: 'Master Vue 😄 !',
+      vueLink: 'https://vuejs.org/'
+    };
+  }
 });
 
 app.mount('#user-goal');
