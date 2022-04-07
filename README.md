@@ -23,10 +23,8 @@ Lesson 17
   * added a bit dynamism to the app (whenever it is reloaded, randomly changes the text content);
   * understanding "methods" in Vue apps.
 
-Lesson 18:
-  * working with data inside of a Vue app.
-
-Lesson 19:
+Lesson 18-19:
+  * working with data inside of a Vue app (this).
   * outputting raw HTML content with `v-html`;
   * not needed to often, and should not be used as a default because we can introduce security issues because we basically circumvent the built in cross site scripting attack protection we have with the double curly braces.
 
