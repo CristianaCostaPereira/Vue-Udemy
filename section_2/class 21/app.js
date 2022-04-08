@@ -5,7 +5,7 @@ const app = Vue.createApp({
     };
   },
 
-  // Not only we use methods in curly braces or with v-bind to dynamically derive a value we want to output, but we can also use them with eventListeners to define code that should be executed when the event occurs
+  // Not only we use methods in curly braces or with v-bind to dynamically derive a value we want to output, but we can also use them with event listeners to define code that should be executed when the event occurs
   methods: {
     // this method above doesn't return anything because it doesn't has to, because the click listener doesn't want a return value
     addCounter() {

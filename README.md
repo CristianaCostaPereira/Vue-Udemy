@@ -41,7 +41,7 @@ Lesson 22:
   * code from previous exercise reorganitation (all logic code into JS).
 
 Lesson 23:
-  * working with event arguments by passing them to methods.
+  * working with `event` arguments by passing them to methods.
 
 Lesson 24:
   * using the native `event` object;
