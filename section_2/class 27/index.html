@@ -37,7 +37,7 @@
       <button v-on:click="resetInput">Reset Input</button>
       
       <!-- A problem with Vue is if we call a method like below, this methods will also be re-executed whenever anything on the page changes, like the counter property, because Vue can't know what this method does, for exemple, if it uses 'counter'-->
-      <!-- That is why Vue re-executes any method we are using anywhere in the HTML code, whever anything on the screen changes -->
+      <!-- That is why Vue re-executes any method we are using anywhere in the HTML code, whenever anything on the screen changes -->
       <!-- This is not good for performance -->
       <!-- And it is why methods are not the best solution for outputting dynamically calculated value -->
       <p>Your Name: {{ outputFullName() }}</p>

@@ -7,7 +7,7 @@ const app = Vue.createApp({
   },
     
   methods: {
-    // The problem with his is when we press the counter button, Vue tries to find out where, on the HTML, it needs to update the rendered page
+    // The problem with this is when we press the counter button, Vue tries to find out where, on the HTML, it needs to update the rendered page
     outputFullName() {
       console.log('Running')
       // Since we are using a method we can add an if statement
