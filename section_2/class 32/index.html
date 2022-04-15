@@ -22,8 +22,7 @@
     </header>
 
     <section id="styling">
-
-      <!-- With () because I want to execute this myself so I can pass 'A' as a string, as a vaçue for this this -->
+      <!-- With () because I want to execute this myself so I can pass 'A' as a string, as a value for this div -->
       <!-- Binding style a dynamic value with v-bind -->
       <!-- style and class are different, so if we bind them dynamically we can use a special syntax, suported by Vue, for these specific attributes as below -->
       <!-- more dynamically, we can check if box A is selected, is true, by using a ternary expression to check if it is truthy -->
@@ -33,8 +32,16 @@
         v-bind:style="{borderColor: boxASelected ? 'red' : '#ccc'}"
         v-on:click="boxSelected('A')">
     </div>
-      <div class="demo" v-on:click="boxSelected('B')"></div>
-      <div class="demo" v-on:click="boxSelected('C')"></div>
+
+      <div
+        class="demo"
+        v-on:click="boxSelected('B')">
+      </div>
+      
+      <div
+        class="demo"
+        v-on:click="boxSelected('C')">
+      </div>
     </section>
   </body>
 </html>
