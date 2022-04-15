@@ -16,6 +16,7 @@
     <script src="app.js" defer></script>
 
   </head>
+
   <body>
     <header>
       <h1>Vue Styling</h1>
@@ -25,17 +26,14 @@
       <!-- 1) Fetch the user input and use it as a CSS class that is added to paragraph-->
       <!-- The entered class should be added to the below paragraph -->
       <!-- v-model to get easier access to the user's input -->
-      <!-- Whatever the user types will be adding as a class -->
+      <!-- Depending on what the user is typing, "user1" or "user2", these names will be added as class -->
       <input
         type="text" v-model="userInput"/>
       <!-- (available classes: "user1", "user2") -->
 
       <!-- Set userInput as class in the paragraph -->
       <!-- And everything that the user enters will be added as a CSS class to the paragraph -->
-      <p
-        :class="paragraphClasses">
-        Style me!
-      </p>
+      <p :class="paragraphClasses">Style me!</p>
 
       <button v-on:click="toggleVisibility">Toggle Paragraph</button>
       <!-- 2) Use the "visible" and "hidden" classes to show/ hide the above paragraph -->
