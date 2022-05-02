@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -33,15 +34,14 @@
       <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
 
       <!-- What we want to output -->
-      <!-- Gives the index off the item in the array by wrapping into parentheses -->
-      <!-- Should use always key attribute whenever we use v-for and wants a unique identification criteria for every item that inputs-->
+      <!-- Should use always key attribute whenever we use v-for and it wants a unique identification criteria for every item that inputs-->
       <!-- To help Vue tell the different elements appart -->
       <ul>
         <li v-for="(goal, index) in goals" v-bind:key="goal" v-on:click="removeGoal(index)">
           <p>{{ goal }} - {{ index }}</p>
 
           <!-- Prevents the removal of the list item when I click on it to write something in the input below -->
-          <!-- Stops propagation, so it makes sure that when we click on the input below the click is only processed there and the click ont he list item is not triggered -->
+          <!-- Stops propagation, so it makes sure that when we click on the input below the click is only processed there and the click on the list item is not triggered -->
           <input type="text" v-on:click.stop>
         </li>
       </ul>
