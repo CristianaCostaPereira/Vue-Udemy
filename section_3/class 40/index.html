@@ -27,15 +27,11 @@
       <input type="text" v-model="enteredGoal" />
       
       <button v-on:click="addGoal">Add Goal</button>
-
     
       <!-- Since goals is an [] we can use the length property -->
       <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
 
-      <!-- v-else has to be used on an element that comes DIRECTLY AFTER an element with v-if on it -->
-      <!-- An element bewteen breaks it -->
-      <!-- They control which part of the HTML code are really including or not on the final page, it really removes and adds elements from the DOM -->
-      <ul v-else="">
+      <ul>
         <li>Goal</li>
       </ul>
     </section>

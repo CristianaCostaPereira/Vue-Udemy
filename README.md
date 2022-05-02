@@ -106,26 +106,26 @@ Assignment 4:
 
 ### Section 3: Rendering Conditional Content & Lists
 
-Lesson 40:
+Lesson 41:
   * rendering content conditionally;
   * `v-if`.
 
-Lesson 41:
+Lesson 42:
   * `v-if`, `v-else` and `v-else-if`.
 
-Lesson 42:
+Lesson 43:
   * when using `v-show`, intead of `v-if`.
 
-Lesson 43:
+Lesson 44:
   * rendering lists of data with `v-for` in an array.
 
-Lesson 44:
+Lesson 45:
   * get the index of the item in the array with `v-for`.
 
-Lesson 45:
+Lesson 46:
   * removing list items.
 
-Lesson 46:
+Lesson 47:
   * lists and `key` attribute.
 
 Assignment 5:
