@@ -36,6 +36,9 @@
       <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
 
       <!-- Only want this to show if we have goals-->
+      <!-- v-else has to be used on an element that comes DIRECTLY AFTER an element with v-if on it -->
+      <!-- An element bewteen breaks it -->
+      <!-- They control which part of the HTML code are really including or not on the final page, it really removes and adds elements from the DOM -->
       <ul v-else>
         <li>Goal</li>
       </ul>
