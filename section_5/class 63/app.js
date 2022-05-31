@@ -9,10 +9,11 @@ const app = Vue.createApp({
     saveInput(event) {
       this.currentUserInput = event.target.value;
     },
+
     setText() {
       // Previous we had: this.message = this.currentUserInput
       // where we need the entered value
-      // Points at the DOM oject for the input element (an object full of keys value pairs, where the keys are the ref identifiers we set up in our template)
+      // Points at the DOM object for the input element (an object full of keys value pairs, where the keys are the ref identifiers we set up in our template)
       // $refs is a special property, provided by Vue
       // All Vue provided properties starts with dollar sign, to make it clear that this is a built-in property
       this.message = this.$refs.userText.value;
@@ -22,18 +23,3 @@ const app = Vue.createApp({
 });
 
 app.mount('#app');
-
-
-const app2 = Vue.createApp({
-  template: `
-    <p>{{ favoriteMeal }}</p>
-  `,
-
-  data() {
-    return {
-      favoriteMeal: 'Pizza'
-    };
-  }
-});
-
-app2.mount('#app2')

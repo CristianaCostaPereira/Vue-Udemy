@@ -23,8 +23,8 @@
 
     <section id="app">
       <h2>How Vue Works</h2>
-      
-      <!-- Gets a value out of a DOM element, when needed intead of all the time -->
+
+      <!-- Gets a value out of a DOM element when needed, instead of all the time -->
       <!-- The value assigned is any string identifier of our choice -->
       <!-- Vue detects this 'refs' and stores them internally, basically memorizes that we want access to the, in this case, input element -->
       <input type="text" ref="userText">
@@ -33,11 +33,5 @@
 
       <p>{{ message }}</p>
     </section>
-
-    <section id="app2">
-      <!-- data properties with the same name in different apps DOES NOT WORK: <p>{{ message }}</p> -->
-
-    </section>
-
   </body>
 </html>
