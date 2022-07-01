@@ -85,7 +85,7 @@ export default {
       // Built in method, that we can call from inside a Vue component with 'this' and allows to emit our custom event to which we can listen from inside the parent component.
       // Wants, at least, one ARGUMENT and that is a name we choose, normally, the name of the custom event.
       // ALWAYS use kebab-case
-      // Every estra argument will be simply be data we pass together with our event
+      // Every extra argument will simply be data we pass together with our event
       // this.id is available because we added a prop named id to our component
       this.$emit('toggle-favorite', this.id);
     },

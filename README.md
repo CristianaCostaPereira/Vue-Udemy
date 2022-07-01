@@ -159,7 +159,7 @@ Lesson 70-72:
   * use of `components`;
 
 
-### Section 7: Moving to a Better Development Setuo & Workflow with the Vue CLI
+### Section 7: Moving to a Better Development Setup & Workflow with the Vue CLI
 
 From this section on, to run the attached code, follow these steps:
 
@@ -193,7 +193,7 @@ Lesson 84-85:
 ### Section 8: Component Communication
 
 vue-first-app:
-  * `props` (lesson 89) - configure the same component with different data when used multiple times;
+  * `props` (lesson 92) - configure the same component with different data when used multiple times;
   * passing data from our app.vue file (parent) into our FriendContact component (child);
   * `$emit` (lesson 94) - communication from the component to the parent
 
@@ -221,7 +221,7 @@ vue-section9-app:
 ### Section 10: Course Project: The Learning Resources APP
 
   * access through: [Cristiana Costa Pereira](https://github.com/CristianaCostaPereira/Resources-App) :octocat:
-  
+
 
 ### Section 11: Forms
 

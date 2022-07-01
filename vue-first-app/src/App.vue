@@ -65,7 +65,7 @@ export default {
         email: email,
         isFavorite: false
       };
-      
+
       this.friends.push(newFriendContact);
     },
 
@@ -76,7 +76,6 @@ export default {
     }
   },
 };
-
 </script>
 
 <style>
