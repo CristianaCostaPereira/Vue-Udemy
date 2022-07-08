@@ -50,7 +50,7 @@ export default {
     isFavorite: {
       trype: Boolean,
       required: false,
-      // When having a non-required prop:
+      // When a prop is not required, we can add a default key, were we provide a default value, which will be used if the prop should be missing
       default: false,
       // validator: function (value) {
       //   return value === '1' || value === '0';
@@ -59,7 +59,7 @@ export default {
   },
 
   emits: ['toggle-favorite', 'delete'],
-  // emitis: {
+  // emits: {
   //   'toggle-favorite': function(id) {
   //     if (id) {
   //       return true;
