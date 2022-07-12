@@ -199,7 +199,6 @@ vue-first-app:
 
 vue-section8-app:
   * lesson 103-105: avoid passing through components and props unnecessary with `provide` and `inject` to provide data in one place and use it in another place;
-  * tool very useful for letting components communicate.
 
 
 ### Sectiom 9: Diving Deeper Into Components

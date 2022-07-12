@@ -2,8 +2,8 @@
   <div>
     <active-element
       :topic-title="activeTopic && activeTopic.title"
-      :text="activeTopic && activeTopic.fullText"
-    ></active-element>
+      :text="activeTopic && activeTopic.fullText">
+      </active-element>
     <knowledge-base></knowledge-base>
   </div>
 </template>
@@ -35,7 +35,7 @@ export default {
   provide() {
     return {
       topics: this.topics,
-      selectTopic: this.activateTopic
+      selectTopic: this.activateTopic // the function that Vue should provide as a value for selectTopic
     };
   },
 
