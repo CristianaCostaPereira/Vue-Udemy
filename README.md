@@ -195,10 +195,10 @@ Lesson 84-85:
 vue-first-app:
   * `props` (lesson 92) - configure the same component with different data when used multiple times;
   * passing data from our app.vue file (parent) into our FriendContact component (child) (lesson 93 - Prop Behaviour and Changing Props);
-  * `$emit` (lesson 97-98) - communication from the child component to the parent
+  * `$emit` (lesson 97-101) - communication from the child component to the parent
 
 vue-section8-app:
-  * lesson 99: avoid passing through components and props unnecessary with `provide` and `inject` to provide data in one place and use it in another place;
+  * lesson 103-105: avoid passing through components and props unnecessary with `provide` and `inject` to provide data in one place and use it in another place;
   * tool very useful for letting components communicate.
 
 
