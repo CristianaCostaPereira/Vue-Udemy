@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- <TheHeader /> -->
     <the-header></the-header>
 
     <button @click="setSelectedComponent('active-goals')">Active Goals</button>
@@ -9,7 +10,7 @@
     <manage-goals v-if="selectedComponent === 'manage-goals'"></manage-goals> -->
     <!-- It is the same as below, but without all of the v-if's -->
     <!-- <component> is our Dynamic component -->
-    <!-- it needs the 'is' property to work and tells component which of the components created should be shown -->
+    <!-- it needs the 'is' property to work and tells Vue which of the components created should be shown -->
     <!-- <keep-alive> tells Vue that components should not be removed and deleted entirely, but, instead, their state should be saved, cached behind the scenes -->
     <keep-alive>
       <component v-bind:is="selectedComponent"></component>

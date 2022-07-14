@@ -204,17 +204,17 @@ vue-section8-app:
 ### Sectiom 9: Diving Deeper Into Components
 
 vue-section9-app:
-  * lesson 107: local components registration;
-  * lesson 108: `scoped` styles;
-  * lesson 109: `slots` - allow us to receive HTML content from outside of the component;
-  * lesson 110: `v-slot` directive;
-  * lesson 112: `$slots` and the v-slot: shorthand;
-  * lesson 113: scoped props;
-  * lesson 114: `<component>` element: dynamic components;
-  * lesson 115: `<keep-alive>` component;
-  * lesson 116: build our own alert component;
-  * lesson 117: `<teleport>` component;
-  * lesson 118: fragment concept;
+  * lesson 110: local components registration;
+  * lesson 111: `scoped` styles;
+  * lesson 112: `slots` - allow us to receive HTML content from outside of the component;
+  * lesson 113: `v-slot` directive;
+  * lesson 115: `$slots` and the v-slot: shorthand;
+  * lesson 116: scoped slots;
+  * lesson 117: `<component>` element: dynamic components;
+  * lesson 118: `<keep-alive>` component;
+  * lesson 119: build our own alert component;
+  * lesson 120: `<teleport>` component;
+  * lesson 121: fragment concept;
 
 
 ### Section 10: Course Project: The Learning Resources APP

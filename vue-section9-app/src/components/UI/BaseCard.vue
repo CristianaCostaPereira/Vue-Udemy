@@ -7,7 +7,8 @@
       </slot>
     </header>
 
-    <slot></slot> <!-- Use our own component as a wrapper around different kinds of HTML content -->
+    <!-- Use our own component as a wrapper around different kinds of HTML content -->
+    <slot></slot>
   </div>
 </template>
 
