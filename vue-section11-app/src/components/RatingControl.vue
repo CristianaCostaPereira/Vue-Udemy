@@ -8,27 +8,14 @@
 
 <script>
 export default {
-  // We build a custom components and Vue uses this specific prop, if we use v-model on a component, and listen to this very specific event which we can emit in that component
+  // If we use v-model on a CUSTOM component, Vue uses this specific prop and listen to this very specific event which we can emit in that component
   props: ['modelValue'],
 
   emits: ['update:modelValue'],
 
-  // data() {
-  //   return {
-  //     activeOption: this.modelValue // so that TheForm component is able to set our initial value (on the rating property)
-  //   };
-  // },
-
-  // computed: {
-  //   activeOption () {
-  //     return this.modelValue
-  //   }
-  // },
-
   methods: {
     activate(option) {
       this.$emit('update:modelValue', option);
-
     }
   }
 }

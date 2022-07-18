@@ -25,9 +25,9 @@
     <div class="form-control">
       <h2>What are you interested in?</h2>
       <div>
-        <input 
+        <input
           id="interest-news"
-          name="interest" 
+          name="interest"
           type="checkbox"
           value="news"
           v-model="interest"
@@ -95,9 +95,9 @@
 import RatingControl from './RatingControl.vue';
 
 export default {
-components: {
-  RatingControl
-},
+  components: {
+    RatingControl
+  },
 
   data() {
     return {
