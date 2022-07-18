@@ -225,11 +225,11 @@ vue-section9-app:
 ### Section 11: Forms
 
 vue-section11-app:
-  * lesson 139: v-model and `.number` modifier;
-  * lesson 140: v-model and dropdowns;
-  * lesson 141: extract values from checkboxes and radio buttons with v-model and the help of `value` attribute;
-  * lesson 142: basic form validation (with the `blue event`);
-  * lesson 144: v-model on custom components.
+  * lesson 142: v-model and `.number` modifier;
+  * lesson 143: v-model and dropdowns;
+  * lesson 144: extract values from checkboxes and radio buttons with v-model and the help of `value` attribute;
+  * lesson 145: basic form validation (with the `blur event`);
+  * lesson 147: v-model on custom components.
 
 
 ### Section 12: Sending HTTP Requests
