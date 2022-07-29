@@ -57,7 +57,7 @@ export default {
       fetch('https://vue-http-demo-ee864-default-rtdb.firebaseio.com/surveys.json')
         .then((response) => {
           if (response.ok) {
-            return response.json(); // method we want to use for parsing the data that is part os the response
+            return response.json(); // method we want to use for parsing the data that is part of the response
           }
         })
 

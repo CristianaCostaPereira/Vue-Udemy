@@ -2,16 +2,22 @@
   <section>
     <base-card>
       <h2>How was you learning experience?</h2>
+
       <form @submit.prevent="submitSurvey">
         <div class="form-control">
           <label for="name">Your Name</label>
+
           <input type="text" id="name" name="name" v-model.trim="enteredName" />
         </div>
+
         <h3>My learning experience was ...</h3>
+
         <div class="form-control">
           <input type="radio" id="rating-poor" value="poor" name="rating" v-model="chosenRating" />
+
           <label for="rating-poor">Poor</label>
         </div>
+
         <div class="form-control">
           <input
             type="radio"
@@ -20,18 +26,22 @@
             name="rating"
             v-model="chosenRating"
           />
+
           <label for="rating-average">Average</label>
         </div>
+
         <div class="form-control">
           <input type="radio" id="rating-great" value="great" name="rating" v-model="chosenRating" />
+
           <label for="rating-great">Great</label>
         </div>
-        <p
-          v-if="invalidInput"
-        >One or more input fields are invalid. Please check your provided data.</p>
+
+        <p v-if="invalidInput">
+          One or more input fields are invalid. Please check your provided data.
+        </p>
 
         <p v-if="error">{{ error }}</p>
-        
+
         <div>
           <base-button>Submit</base-button>
         </div>
@@ -50,19 +60,16 @@ export default {
       error: null
     };
   },
-  // emits: ['survey-submit'],
+
   methods: {
     submitSurvey() {
       if (this.enteredName === '' || !this.chosenRating) {
         this.invalidInput = true;
+
         return;
       }
-      this.invalidInput = false;
 
-      // this.$emit('survey-submit', {
-      //   userName: this.enteredName,
-      //   rating: this.chosenRating,
-      // });
+      this.invalidInput = false;
 
       this.error = null;
 
@@ -86,7 +93,7 @@ export default {
           if (response.ok) {
             // ...
           } else {
-            throw new Error('Could not save data!'); // The argument passed to the error constructor is the message that will be set for the error. Will automatically reach to our catch() block  
+            throw new Error('Could not save data!'); // The argument passed to the error constructor is the message that will be set for the error. Will automatically reach to our catch() block
           }
       }).catch((error) => {
         console.log(error);
