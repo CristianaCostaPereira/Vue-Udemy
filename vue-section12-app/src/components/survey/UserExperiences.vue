@@ -7,9 +7,11 @@
         <base-button @click="loadExperiences">Load Submitted Experiences</base-button>
       </div>
 
-      <p v-if="isLoading">Loading ⚙️</p>
+      <p v-if="isLoading">Loading ⏳</p>
 
-      <p v-else-if="!isLoading && error">{{ error }}</p>
+      <p v-else-if="!isLoading && error">
+        {{ error }}
+      </p>
 
       <p v-else-if="!isLoading && (!results || results.length === 0)">No stored experiences found. Please add information to the survey first.</p>
 

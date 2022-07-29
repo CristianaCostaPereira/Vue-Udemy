@@ -235,14 +235,14 @@ vue-section11-app:
 ### Section 12: Sending HTTP Requests
 
 vue-section12-app:
-  * lesson 150: fetch method;
-  * lesson 151: sending a `POST` request to store data;
-  * lesson 154: getting data (GET request) and transforming response data;
-  * lesson 155: loading data when a component mounts;
-  * lesson 156: 'Loading' message added;
-  * lesson 157: 'No data' message added;
-  * lesson 158: handling browser-side errors;
-  * lesson 159: handling error responses;
+  * lesson 153: fetch method;
+  * lesson 154: sending a `POST` request to store data;
+  * lesson 157: getting data (GET request) and transforming response data;
+  * lesson 158: loading data when a component mounts;
+  * lesson 159: 'Loading' message added;
+  * lesson 160: 'No data' message added;
+  * lesson 161: handling browser-side errors;
+  * lesson 162: handling error responses;
 
 
 ### Section 13: Routing: Building "Multi-Page" Single Page Applications
