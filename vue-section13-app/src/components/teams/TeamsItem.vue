@@ -1,7 +1,9 @@
 <template>
   <li>
     <h3>{{ name }}</h3>
+
     <div class="team-members">{{ memberCount }} Members</div>
+
     <router-link :to="teamMembersLink">View Members</router-link>
   </li>
 </template>
@@ -13,7 +15,7 @@ export default {
   computed: {
     teamMembersLink() {
       // return '/teams/' + this.id + '?sort=asc'; // generated URL
-      return { 
+      return {
         name: 'team-members',
         params: { teamId: this.id },
         query: { sort: 'asc' }
@@ -23,7 +25,7 @@ export default {
       // this.$router.push({ name: 'team-members', params: { teamId: this.id } });
     }
   }
-};
+}
 </script>
 
 <style scoped>

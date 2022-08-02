@@ -1,10 +1,12 @@
 <template>
   <div>
     <the-navigation></the-navigation>
+
     <main>
-      <!-- special component that lets vue-router know where to load/render the component to -->
+      <!-- special component that lets vue-router know where to load the component to -->
       <router-view></router-view>
     </main>
+
     <footer>
       <router-view name="footer"></router-view>
     </footer>
@@ -18,6 +20,7 @@ export default {
   components: {
     TheNavigation,
   },
+
   data() {
     return {
       teams: [
@@ -25,6 +28,7 @@ export default {
         { id: 't2', name: 'Backend Engineers', members: ['u1', 'u2', 'u3'] },
         { id: 't3', name: 'Client Consulting', members: ['u4', 'u5'] },
       ],
+
       users: [
         { id: 'u1', fullName: 'Max Schwarz', role: 'Engineer' },
         { id: 'u2', fullName: 'Praveen Kumar', role: 'Engineer' },
@@ -32,15 +36,16 @@ export default {
         { id: 'u4', fullName: 'Alex Blackfield', role: 'Consultant' },
         { id: 'u5', fullName: 'Marie Smith', role: 'Consultant' },
       ],
-    };
+    }
   },
+
   provide() {
     return {
       teams: this.teams,
       users: this.users,
     };
   }
-};
+}
 </script>
 
 <style>

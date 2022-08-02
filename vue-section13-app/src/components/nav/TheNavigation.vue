@@ -5,12 +5,13 @@
         <li>
           <!-- built-in component that comes with vue-router -->
           <!-- Similar to the anchor tag but this component makes sure that the browser default of loading the page is prevented and the browser does not try to load a different HTML file -->
-          <!-- but instead the router analyzes the value in the ref attribute and checks the route config to find the appropriate Vue component that should be loaded and by doing so, updates the URL -->
+          <!-- instead the router analyzes the value in the ref attribute and checks the route config to find the appropriate Vue component that should be loaded and by doing so, updates the URL -->
           <!-- Under the hood will render an anchor tag -->
           <!-- Internally it uses slots so we can pass any HTML element -->
           <!-- The 'to' prop is its most important configuration -->
           <router-link to="/teams">Teams</router-link>
         </li>
+
         <li>
           <router-link to="/users">Users</router-link>
         </li>

@@ -1,6 +1,7 @@
 <template>
   <li>
     <h3>{{ name }}</h3>
+
     <div class="role" :class="roleClass">{{ role }}</div>
   </li>
 </template>
@@ -8,6 +9,7 @@
 <script>
 export default {
   props: ['name', 'role'],
+
   computed: {
     roleClass() {
       if (this.role === 'Engineer') {
@@ -18,8 +20,8 @@ export default {
       }
       return null;
     },
-  },
-};
+  }
+}
 </script>
 
 <style scoped>

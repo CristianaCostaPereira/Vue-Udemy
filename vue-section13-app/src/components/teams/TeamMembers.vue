@@ -1,15 +1,19 @@
 <template>
   <section>
     <h2>{{ teamName }}</h2>
+
     <ul>
       <user-item
         v-for="member in members"
         :key="member.id"
         :name="member.fullName"
-        :role="member.role"
-      ></user-item>
+        :role="member.role">
+      </user-item>
     </ul>
-    <router-link to="/teams/t2">Go to Team 2</router-link>
+
+    <router-link to="/teams/t2">
+      Go to Team 2
+    </router-link>
   </section>
 </template>
 
@@ -28,32 +32,33 @@ export default {
   data() {
     return {
       teamName: '',
-      members: []      
+      members: []
     };
   },
 
   methods: {
     loadTeamMembers(teamId) {
-      const selectedTeam = this.teams.find(team => team.id === teamId); // will helps us select the right team
-      const members = selectedTeam.members; // finds the members once we got a team
+      const selectedTeam = this.teams.find(team => team.id === teamId) // will helps us select the right team
+      const members = selectedTeam.members // finds the members once we got a team
+
+      const selectedMembers = []
 
       // this loop reachs to users and finds the full user entries for those members, because members is just an array full os Id's
-      const selectedMembers = [];
       for (const member of members) {
-      const selectedUser = this.users.find(user => user.id === member); // member is just a another user Id 
-      selectedMembers.push(selectedUser); // add to selectedMembers by pushing it
+        const selectedUser = this.users.find(user => user.id === member) // member is just another user Id
+        selectedMembers.push(selectedUser) // add to selectedMembers by pushing it
       }
 
-      this.teamName = selectedTeam.name;
-      this.members = selectedMembers;
+      this.teamName = selectedTeam.name
+      this.members = selectedMembers
 
-      console.log(this.$route.query);
+      console.log(this.$route.query)
     }
   },
 
   created() {
     // this.$route.path // / teams/t1
-    this.loadTeamMembers(this.teamId);
+    this.loadTeamMembers(this.teamId)
   },
 
   // watches when teamId changes
@@ -62,16 +67,15 @@ export default {
       this.loadTeamMembers(newId);
     }
   },
-  
+
   // Vue will call this method whenever this component is about to be reused with new data because the route changed
   // Can be an alternative to watch the teamId prop
   beforeRouteUpdate(to, from, next) {
     console.log('TeamMembers Component beforeRouteUpdate');
     console.log(to, from);
-    // this.loadTeamMembers(to.params.teamId); // Commented because we are already loading teamMembers when the teamId changes
     next();
   }
-};
+}
 </script>
 
 <style scoped>

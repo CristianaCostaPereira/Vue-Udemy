@@ -248,26 +248,27 @@ vue-section12-app:
 ### Section 13: Routing: Building "Multi-Page" Single Page Applications
 
 vue-section13-app:
-  * lesson 164: `npm install --save vue-router@next` (package we can add to our projects to add the routing functionality);
-  * lesson 165: registering and rendering routes and the `router-view` component;
-  * lesson 166: navigating with `router-link` component;
-  * lesson 167: styling active links;
-  * lesson 168: programmatic navigation with `$router`;
-  * lesson 169: passing data with route params (dynamic segments);
-  * lesson 170: navigation and dynamic paths;
-  * lesson 173: option of passing params as props;
-  * lesson 174: `redirect` and `alias` properties, "catch all" routes and handle invalid input's;
-  * lesson 175: nested routes - `children` option;
-  * lesson 176: `name` and `params` property;
-  * lesson 177: `query` property;
-  * lesson 178: multiple routes with named router views;
-  * lesson 179: controlling scroll behaviour;
-  * lesson 180-182: navigation guards;
-  * lesson 183: route leave guards: `beforeRouteLeave`;
-  * lesson 184: route metadata;
+  * lesson 167: `npm install --save vue-router@next` (package we can add to our projects to add the routing functionality);
+  * lesson 168: registering and rendering routes and the `router-view` component;
+  * lesson 169: navigating with `router-link` component;
+  * lesson 170: styling active links;
+  * lesson 171: programmatic navigation with `$router`;
+  * lesson 172: passing data with route params (dynamic segments);
+  * lesson 173: navigation and dynamic paths with `:to`;
+  * lesson 175: updating params data with `watchers`;
+  * lesson 176: option of passing params as props;
+  * lesson 177: `redirect` and `alias` properties, "catch all" routes and handle invalid input's;
+  * lesson 178: nested routes - `children` option;
+  * lesson 179: `name` and `params` properties;
+  * lesson 180: `query` property;
+  * lesson 181: multiple routes with named router views;
+  * lesson 182: controlling scroll behaviour;
+  * lesson 183-185: navigation guards;
+  * lesson 186: route leave guards: `beforeRouteLeave`;
+  * lesson 187: route metadata;
 
 
-  ### Section 14: Animations and Trasitions
+### Section 14: Animations and Trasitions
 
 vue-section14-app:
   * lesson 189: basic animation with CSS transistions;

@@ -2,6 +2,7 @@
   <div>
     <button @click="confirmInput">Confirm</button>
     <button @click="saveChanges">Save changes</button>
+
     <ul>
       <user-item v-for="user in users" :key="user.id" :name="user.fullName" :role="user.role"></user-item>
     </ul>
@@ -26,7 +27,7 @@ export default {
     confirmInput() {
       // does something
 
-      // Special property available in our component config object because we added the router package (router is used in our Vue app)
+      // Special property available in our component config object because we added the router package
       // Triggers the navigation from inside the JS code from inside our component config object programatically
       // .push() for navigating PROGRAMATICALLY, to add a new route to this routing memory the browser keeps
       // .push() takes a string with the path we want to go
@@ -46,7 +47,7 @@ export default {
     next();
   },
 
-  // The router will call this first before calling all the others beforeEach an beforeEnter guards
+  // The router will call this first before calling all the others beforeEach and beforeEnter guards
   // Navigational guard that makes sure the user do not leave the page accidentally and lose their input
   beforeRouteLeave(to, from, next) {
     console.log('UserList component beforeRouteLeave');
@@ -64,7 +65,7 @@ export default {
   unmounted() {
     console.log('unmounted');
   }
-};
+}
 </script>
 
 <style scoped>
