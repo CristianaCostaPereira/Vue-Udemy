@@ -8,6 +8,12 @@ const store = createStore({
     return {
       counter: 0
     }
+  },
+  mutations: {
+    // Vuex garantees that this method will automatically get the current (latest) state as an argument whenever this method is triggered
+    increment(state) {
+      state.counter = state.counter + 2
+    }
   }
 })
 

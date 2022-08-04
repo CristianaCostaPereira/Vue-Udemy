@@ -288,5 +288,6 @@ vue-section14-app:
 
 vue-section15-app:
   * lesson 211: what is Vuex and why use it;
-  * lesson 212: creating and using a store;
+  * lesson 212: creating and using a `store`;
   * lesson 213: connecting components to state;
+  * lesson 214: introducing `mutations` (a better way of changing data);
