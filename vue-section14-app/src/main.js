@@ -11,6 +11,7 @@ app.component('base-modal', BaseModal);
 app.use(router);
 
 // Will let us know when the router successfully evaluated which page should be loaded
+// Set were we register our router const with our Vue app
 router.isReady().then(function() {
   app.mount('#app');
-});
+})

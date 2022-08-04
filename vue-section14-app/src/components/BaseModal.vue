@@ -1,9 +1,16 @@
 <template>
   <div>
-    <div v-if="open" class="backdrop" @click="$emit('close')"></div>
-    
+    <div
+      v-if="open"
+      class="backdrop"
+      @click="$emit('close')">
+    </div>
+
     <transition name="modal">
-      <dialog open v-if="open">
+      <dialog
+        open
+        v-if="open">
+
         <slot></slot>
       </dialog>
     </transition>
@@ -13,8 +20,9 @@
 <script>
 export default {
   props: ['open'],
+
   emits: ['close'],
-};
+}
 </script>
 
 <style scoped>

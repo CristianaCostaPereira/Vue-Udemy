@@ -9,6 +9,6 @@ const router = createRouter({
     { path: '/', component: AllUsers },
     { path: '/goals', component: CourseGoals }
   ]
-});
+})
 
-export default router;
+export default router

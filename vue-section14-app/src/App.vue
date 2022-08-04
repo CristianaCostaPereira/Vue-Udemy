@@ -1,6 +1,9 @@
 <template>
   <router-view v-slot="slotProps">
-    <transition name="fade-button" mode="out-in">
+    <transition
+      name="fade-button"
+      mode="out-in">
+
       <!-- slotProps have a property named Component, with 'C', which holds the component that should be loaded for the currently selected route -->
       <component :is="slotProps.Component"></component>
     </transition>
@@ -8,7 +11,6 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {
@@ -18,7 +20,7 @@ export default {
       usersAreVisible: false,
       enterInterval: null,
       leaveInterval: null
-      };
+    }
   },
 
   methods: {
@@ -28,106 +30,113 @@ export default {
 
     // Executes when the enter animation starts (when .paragraph-enter-from is being added)
     beforeEnter(el) {
-      console.log('beforeEnter');
-      console.log(el);
+      console.log('beforeEnter')
+      console.log(el)
 
-      el.style.opacity = 0;
+      el.style.opacity = 0
     },
 
     enter(el, done) {
-      console.log('enter');
-      console.log(el);
+      console.log('enter')
+      console.log(el)
 
-      let round = 1;
+      let round = 1
 
       this.enterInterval = setInterval(() => {
-        el.style.opacity = round * 0.01;
-        round++;
+        el.style.opacity = round * 0.01
+
+        round++
+
         if (round > 100) {
           clearInterval(this.enterInterval);
           done();
         }
-      }, 20);
+      }, 20)
     },
 
-    // Only call when the animation finishes
+    // Only called when the animation finishes
     afterEnter(el) {
-      console.log('afterEnter');
-      console.log(el);
+      console.log('afterEnter')
+      console.log(el)
     },
 
     // When the element is leaving the DOM
     beforeLeave(el) {
-      console.log('beforeLeave');
-      console.log(el);
+      console.log('beforeLeave')
+      console.log(el)
 
-      el.style.opacity = 1;
+      el.style.opacity = 1
     },
 
     leave(el, done) {
-      console.log('leave');
-      console.log(el);
+      console.log('leave')
+      console.log(el)
 
-      let round = 1;
+      let round = 1
 
       this.leaveInterval = setInterval(() => {
-        el.style.opacity = 1 - round * 0.01;
-        round++;
+        el.style.opacity = 1 - round * 0.01
+
+        round++
+
         if (round > 100) {
-          clearInterval(this.leaveInterval);
+          clearInterval(this.leaveInterval)
           done();
         }
-      }, 20);
+      }, 20)
     },
 
     afterLeave(el) {
-      console.log('afterLeave');
-      console.log(el);
+      console.log('afterLeave')
+      console.log(el)
     },
 
     enterCancelled(el) {
       console.log(el);
-      clearInterval(this.enterInterval);
+      clearInterval(this.enterInterval)
     },
 
     leaveCancelled(el) {
-      console.log(el);
-      clearInterval(this.leaveInterval);
+      console.log(el)
+      clearInterval(this.leaveInterval)
     },
 
     toggleParagraph() {
-      this.paragraphIsVisible = !this.paragraphIsVisible;
+      this.paragraphIsVisible = !this.paragraphIsVisible
     },
 
     showUsers() {
-      this.usersAreVisible = true;
+      this.usersAreVisible = true
     },
 
     hideUsers() {
-      this.usersAreVisible = false;
+      this.usersAreVisible = false
     },
 
     showDialog() {
-      this.dialogIsVisible = true;
+      this.dialogIsVisible = true
     },
 
     hideDialog() {
-      this.dialogIsVisible = false;
+      this.dialogIsVisible = false
     },
   },
-};
+}
 </script>
 
 <style>
 * {
   box-sizing: border-box;
 }
+
 html {
   font-family: sans-serif;
 }
+
 body {
   margin: 0;
 }
+
 button {
   font: inherit;
   padding: 0.5rem 2rem;
@@ -137,11 +146,13 @@ button {
   color: white;
   cursor: pointer;
 }
+
 button:hover,
 button:active {
   background-color: #a80b48;
   border-color: #a80b48;
 }
+
 .block {
   width: 8rem;
   height: 8rem;
@@ -149,6 +160,7 @@ button:active {
   margin-bottom: 2rem;
   /* transition: transform 0.3s ease-out; Name of the property we want to animate, its durantion and his accelaration */
 }
+
 .container {
   max-width: 40rem;
   margin: 2rem auto;
@@ -192,7 +204,7 @@ button:active {
   animation: slide-scale 0.4s ease-in
 }
 
-/* Define in detail how animation should behave */
+/* Define in detail how the animation should behave */
 @keyframes slide-scale {
   0% {
     transform: translateX(0) scale(1);

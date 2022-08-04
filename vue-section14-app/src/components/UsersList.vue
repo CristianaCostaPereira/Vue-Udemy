@@ -3,11 +3,17 @@
     <!-- Capable of animate individual lists items, but also multiple elements at the same time, making it great for lists -->
     <!-- Will render an element to the DOM and we can control which element by adding the tag prop -->
     <transition-group tag="ul" name="user-list">
-      <li v-for="user in users" :key="user" @click="removeUser(user)">{{ user }}</li>
+      <li
+        v-for="user in users"
+        :key="user"
+        @click="removeUser(user)">
+        {{ user }}
+      </li>
     </transition-group>
 
     <div>
       <input type="text" ref="userNameInput"/>
+
       <button @click="addUser">Add Users 🖋️</button>
     </div>
   </div>
@@ -20,6 +26,7 @@ export default {
       users: [
         'Cris',
         'Nuno',
+        'Gui',
         'Irene',
         'Cina',
         'Mino'
@@ -35,7 +42,7 @@ export default {
 
     removeUser(user) {
       // So we keep all the users where the names are not equal to the user we are getting as an argument
-      // And ig the name is equal, we return false
+      // And if the name is equal, we return false
       this.users = this.users.filter(name => name !== user);
     }
   }
@@ -65,7 +72,7 @@ input {
 }
 
 .user-list-enter-active {
-  transition: all 1s ease-out; 
+  transition: all 1s ease-out;
 }
 
 .user-list-enter-to,
@@ -81,7 +88,7 @@ input {
 
 .user-list-leave-to {
   opacity: 0;
-  transform: translateX(30px);
+  transform: translateX(300px);
 }
 
 /* Allow us to control the animation of all the other elements which are not getting added or removed, but might need to move around to make place for the new element or to fill up the space of the leaving element */

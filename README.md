@@ -271,14 +271,14 @@ vue-section13-app:
 ### Section 14: Animations and Trasitions
 
 vue-section14-app:
-  * lesson 189: basic animation with CSS transistions;
-  * lesson 190: `@keyframes`;
-  * lesson 192-193: `<transition>` component;
-  * lesson 195: custom CSS classes names;
-  * lesson 196: animating a modal;
-  * lesson 197: `mode` prop and transitioning between multiple elements;
-  * lesson 198: transition events;
-  * lesson 199-200: building animations with JS transitions instead of CSS and disabling CSS transitions (`css` prop);
-  * lesson 201-202: animating lists with `tansition-group`;
-  * lesson 203: animate list item movement with the special CSS class `move`;
-  * lesson 204: animating route changes;
+  * lesson 192: basic animation with CSS transistions;
+  * lesson 193: `@keyframes`;
+  * lesson 195-197: `<transition>` component;
+  * lesson 198: custom CSS classes names;
+  * lesson 199: animating a modal;
+  * lesson 200: `mode` prop and transitioning between multiple elements;
+  * lesson 201: transition events;
+  * lesson 202-203: building animations with JS transitions instead of CSS and disabling CSS transitions (`css` prop);
+  * lesson 204-205: animating lists with `transition-group`;
+  * lesson 206: animate list item movement with the special CSS class `move`;
+  * lesson 207: animating route changes;
