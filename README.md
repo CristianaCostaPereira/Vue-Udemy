@@ -282,3 +282,11 @@ vue-section14-app:
   * lesson 204-205: animating lists with `transition-group`;
   * lesson 206: animate list item movement with the special CSS class `move`;
   * lesson 207: animating route changes;
+
+
+### Section 15: Vuex
+
+vue-section15-app:
+  * lesson 211: what is Vuex and why use it;
+  * lesson 212: creating and using a store;
+  * lesson 213: connecting components to state;
