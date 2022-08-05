@@ -19,6 +19,7 @@ const counterModule = {
     },
 
     increase (state, payload) {
+      console.log(state);
       state.counter = state.counter + payload.value
     }
   },
@@ -37,6 +38,10 @@ const counterModule = {
   },
 
   getters: {
+    testAuth(state) {
+      return state.userIsAuthentiticated
+    },
+
     // All getter methods in Vuex, gets TWO arguments: state and getters
     finalCounter (state) {
       return state.counter * 3
