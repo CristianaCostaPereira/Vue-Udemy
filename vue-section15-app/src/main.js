@@ -9,6 +9,7 @@ const store = createStore({
       counter: 0
     }
   },
+
   mutations: {
     // Vuex garantees that this method will automatically get the current (latest) state as an argument whenever this method is triggered
     increment(state) {
@@ -28,6 +29,7 @@ const store = createStore({
     },
 
     increase (context, payload) {
+      console.log(context)
       context.commit('increase', payload)
     }
   },
