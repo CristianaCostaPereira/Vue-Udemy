@@ -6,7 +6,8 @@ import App from './App.vue';
 const store = createStore({
   state() {
     return {
-      counter: 0
+      counter: 0,
+      userIsAuthentiticated: false
     }
   },
 
@@ -18,6 +19,14 @@ const store = createStore({
 
     increase (state, payload) {
       state.counter = state.counter + payload.value
+    },
+
+    login (state) {
+      state.userIsAuthentiticated = true
+    },
+
+    logout (state) {
+      state.userIsAuthentiticated = false
     }
   },
 
@@ -31,6 +40,14 @@ const store = createStore({
     increase (context, payload) {
       console.log(context)
       context.commit('increase', payload)
+    },
+
+    login (context) {
+      context.commit('login')
+    },
+
+    logout (context) {
+      context.commit('logout')
     }
   },
 
@@ -50,6 +67,10 @@ const store = createStore({
         return 100
       }
       return finalCounter
+    },
+
+    userIsAuthentiticated (state) {
+      return state.userIsAuthentiticated
     }
   }
 })
