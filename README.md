@@ -291,3 +291,5 @@ vue-section15-app:
   * lesson 212: creating and using a `store`;
   * lesson 213: connecting components to state;
   * lesson 214: introducing `mutations` (a better way of changing data);
+  * lesson 215: passing data to mutations with `payloads`;
+  * lesson 216: introducing `getters` (a better way of getting data);

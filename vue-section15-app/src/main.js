@@ -13,6 +13,29 @@ const store = createStore({
     // Vuex garantees that this method will automatically get the current (latest) state as an argument whenever this method is triggered
     increment(state) {
       state.counter = state.counter + 2
+    },
+
+    increase (state, payload) {
+      state.counter = state.counter + payload.value
+    }
+  },
+
+  getters: {
+    // All getter methods in Vuex, gets TWO arguments: state and getters
+    finalCounter (state) {
+      return state.counter * 3
+    },
+
+    normalizedCounter (_, getters) {
+      const finalCounter = getters.finalCounter
+      if (finalCounter < 0) {
+        return 0
+      }
+
+      if (finalCounter > 100) {
+        return 100
+      }
+      return finalCounter
     }
   }
 })
