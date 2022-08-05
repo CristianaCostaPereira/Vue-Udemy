@@ -3,11 +3,12 @@ import { createStore } from 'vuex';
 
 import App from './App.vue';
 
-const store = createStore({
-  state() {
+// It is an onject, NOT a store
+// But now it is an object with the same features as the object we pass to create store
+const counterModule = {
+  state () {
     return {
-      counter: 0,
-      userIsAuthentiticated: false
+      counter: 0
     }
   },
 
@@ -19,19 +20,11 @@ const store = createStore({
 
     increase (state, payload) {
       state.counter = state.counter + payload.value
-    },
-
-    login (state) {
-      state.userIsAuthentiticated = true
-    },
-
-    logout (state) {
-      state.userIsAuthentiticated = false
     }
   },
 
   actions: {
-    increment(context) {
+    increment (context) {
       setTimeout(() => {
         context.commit('increment')
       }, 2000)
@@ -40,14 +33,6 @@ const store = createStore({
     increase (context, payload) {
       console.log(context)
       context.commit('increase', payload)
-    },
-
-    login (context) {
-      context.commit('login')
-    },
-
-    logout (context) {
-      context.commit('logout')
     }
   },
 
@@ -68,7 +53,41 @@ const store = createStore({
       }
       return finalCounter
     },
+  }
+}
 
+const store = createStore({
+  modules: {
+    numbers: counterModule
+  },
+
+  state() {
+    return {
+      userIsAuthentiticated: false
+    }
+  },
+
+  mutations: {
+    login (state) {
+      state.userIsAuthentiticated = true
+    },
+
+    logout (state) {
+      state.userIsAuthentiticated = false
+    }
+  },
+
+  actions: {
+    login (context) {
+      context.commit('login')
+    },
+
+    logout (context) {
+      context.commit('logout')
+    }
+  },
+
+  getters: {
     userIsAuthentiticated (state) {
       return state.userIsAuthentiticated
     }
