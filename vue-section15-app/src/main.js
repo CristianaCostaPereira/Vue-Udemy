@@ -6,6 +6,8 @@ import App from './App.vue';
 // It is an onject, NOT a store
 // But now it is an object with the same features as the object we pass to create store
 const counterModule = {
+  namespaced: true,
+
   state () {
     return {
       counter: 0
@@ -38,10 +40,6 @@ const counterModule = {
   },
 
   getters: {
-    testAuth(state) {
-      return state.userIsAuthentiticated
-    },
-
     // All getter methods in Vuex, gets TWO arguments: state and getters
     finalCounter (state) {
       return state.counter * 3
@@ -63,6 +61,7 @@ const counterModule = {
 
 const store = createStore({
   modules: {
+    // namespaced of the counterModules
     numbers: counterModule
   },
 

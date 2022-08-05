@@ -44,7 +44,7 @@ export default {
       // Alternative to the code line above
       // Needs to have a 'type' property that will hold the name of the action
       this.$store.dispatch({
-        type: 'increase',
+        type: 'numbers/increase',
         value: 10
       })
     }
