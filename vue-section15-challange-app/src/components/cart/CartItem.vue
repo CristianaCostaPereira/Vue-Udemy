@@ -3,39 +3,53 @@
     <div>
       <img :src="image" :alt="title" />
     </div>
+
     <div>
       <h3>{{ title }}</h3>
+
       <div class="item__data">
         <div>
           Price per Item:
           <strong>${{ price }}</strong>
         </div>
+
         <div>
           Quantity:
           <strong>{{ qty }}</strong>
         </div>
       </div>
-      <div class="item__total">Total: ${{ itemTotal }}</div>
-      <button @click="remove">Remove</button>
+
+      <div class="item__total">
+        Total: ${{ itemTotal }}
+      </div>
+
+      <button @click="remove">
+        Remove
+      </button>
     </div>
   </li>
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
-  inject: ['removeProductFromCart'],
   props: ['prodId', 'title', 'image', 'price', 'qty'],
+
   computed: {
     itemTotal() {
-      return (this.price * this.qty).toFixed(2);
+      return (this.price * this.qty).toFixed(2)
     }
   },
+
   methods: {
+    ...mapActions('cartModule', ['removeProduct']),
+
     remove() {
-      this.removeProductFromCart(this.prodId);
+      this.removeProduct(this.prodId)
     }
   }
-};
+}
 </script>
 
 <style scoped>

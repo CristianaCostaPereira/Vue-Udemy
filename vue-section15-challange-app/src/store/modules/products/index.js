@@ -31,10 +31,6 @@ const productsModule = {
     }
   },
 
-  mutations: {},
-
-  actions: {},
-
   getters: {
     products (state) {
       return state.products

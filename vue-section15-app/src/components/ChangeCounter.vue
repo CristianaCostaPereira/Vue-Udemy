@@ -5,6 +5,7 @@
 
 <script>
 import { mapActions } from 'vuex'
+
 export default {
   methods: {
     // commit() is a built-in method that Vuex give us on its store

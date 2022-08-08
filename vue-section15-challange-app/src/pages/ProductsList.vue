@@ -26,7 +26,7 @@ export default {
   computed: {
     ...mapGetters ('productsModule', ['products'])
   }
-};
+}
 </script>
 
 <style scoped>

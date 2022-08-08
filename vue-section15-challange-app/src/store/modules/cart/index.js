@@ -33,12 +33,28 @@ const cartModule = {
 
       state.cart.qty++
       state.cart.total += productData.price
+    },
+
+    removeProduct (state, prodId) {
+      const productInCartIndex = state.cart.items.findIndex(
+        (cartItem) => cartItem.productId === prodId
+      )
+
+      const prodData = state.cart.items[productInCartIndex]
+
+      state.cart.items.splice(productInCartIndex, 1)
+      state.cart.qty -= prodData.qty
+      state.cart.total -= prodData.price * prodData.qty
     }
   },
 
   actions: {
     addProduct (context, payload) {
       context.commit('addProduct', payload)
+    },
+
+    removeProduct (context, payload) {
+      context.commit('removeProduct', payload)
     }
   },
 
