@@ -294,3 +294,9 @@ vue-section15-app:
   * lesson 215: passing data to mutations with `payloads`;
   * lesson 216: introducing `getters` (a better way of getting data);
   * lesson 217-218: running `async` code with `actions` and understanding the action 'context';
+  * lesson 219: `mapper` helpers;
+  * lesson 220: practice mapper helpers;
+  * lesson 221: organizing our store with modules;
+  * lesson 222: local module state;
+  * lesson 223: `namespaced`;
+  * lesson 226-227: 'VueShop' challenge.
