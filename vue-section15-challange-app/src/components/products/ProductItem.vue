@@ -4,6 +4,7 @@
       <div class="product__image">
         <img :src="image" :alt="title" />
       </div>
+
       <div class="product__text">
         <h3>{{ title }}</h3>
         <base-badge mode="highlight" :no-margin-left="true">
@@ -12,6 +13,7 @@
         <p>{{ description }}</p>
       </div>
     </div>
+
     <div class="product__actions">
       <button @click="addToCart">Add to Cart</button>
     </div>
@@ -19,12 +21,16 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
-  inject: ['addProductToCart'],
   props: ['id', 'image', 'title', 'price', 'description'],
+
   methods: {
+    ...mapActions ('cartModule', ['addProduct']),
+
     addToCart() {
-      this.addProductToCart({
+      this.addProduct({
         id: this.id,
         image: this.image,
         title: this.title,
