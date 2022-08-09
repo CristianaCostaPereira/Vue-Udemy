@@ -300,3 +300,8 @@ vue-section15-app:
   * lesson 222: local module state;
   * lesson 223: `namespaced`;
   * lesson 226-227: 'VueShop' challenge.
+
+
+### Section 16: Main Project: Find a Coach Web APP
+
+  * access through: [Cristiana Costa Pereira](https://github.com/CristianaCostaPereira/Find_a_Coach) :octocat:
