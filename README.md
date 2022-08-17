@@ -165,21 +165,25 @@ From this section on, to run the attached code, follow these steps:
 
   1. Clone or fork the project named:
 
-    vue-first-app :octocat:
+    vue-first-app
 
-  2. Then install all the required packages and dependencies:
+  2. Then, install all the required packages and dependencies:
 
-    `cd` into your new folder and run:
-```
-npm install
-```
+      `cd` into your new folder and in there run:
+
+  ```
+  npm install
+  ```
+
   This will create a `node_modules` folder.
 
   3. Run:
+
 ```
 npm run serve
 ```
-  to bring up the development server, view the app at `localhost:8080` (or whichever port is shown in your terminal)
+
+  To bring up the development server, view the app at `localhost:8080` (or whichever port is shown in your terminal)
 
 Lesson 83:
   * `Vue CLI`;
@@ -304,4 +308,19 @@ vue-section15-app:
 
 ### Section 16: Main Project: Find a Coach Web APP
 
-  * access through: [Cristiana Costa Pereira](https://github.com/CristianaCostaPereira/Find_a_Coach) :octocat:
+  * access through: [Cristiana Costa Pereira](https://github.com/CristianaCostaPereira/Find_a_Coach)
+
+
+### Vue & authentication
+Whithin the scope of the Find_a_Coach app:
+  * lesson 261: how authentication works in Vue apps (or any SPA);
+  * lesson 262: locking / protecting backend resources (rules published in Firebase);
+  * lesson 263: adding an authentication page (login and sign up);
+  * lesson 264-265: adding a 'signup' action;
+  * lesson 266: better UX - loading spinner and error handling;
+  * lesson 267: adding a 'login' action;
+  * lesson 268: attaching token to outgoing requests;
+  * lesson 269: UI update based on auth state;
+  * lesson 270: 'logout' action added;
+  * lesson 271: authentication and routing (navigational guards included);
+  * lesson 272-273: `localStorage`
