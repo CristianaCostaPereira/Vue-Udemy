@@ -311,7 +311,7 @@ vue-section15-app:
   * access through: [Cristiana Costa Pereira](https://github.com/CristianaCostaPereira/Find_a_Coach)
 
 
-### Vue & authentication
+### Section 17: Vue & authentication
 Whithin the scope of the Find_a_Coach app:
   * lesson 261: how authentication works in Vue apps (or any SPA);
   * lesson 262: locking / protecting backend resources (rules published in Firebase);
@@ -324,3 +324,12 @@ Whithin the scope of the Find_a_Coach app:
   * lesson 270: 'logout' action added;
   * lesson 271: authentication and routing (navigational guards included);
   * lesson 272-273: `localStorage`
+
+
+### Section 18: Optimizing & Deploying Vue apps
+  * lesson 278: asynchronous components (`defineAsyncComponent`) and routing - `import()`;
+  * lesson 280: building the project for production: `npm run build`;
+  * lesson 281: deploying the appto Firebase.
+
+
+ ### Section 19: The Composition API - Replacing the Options API
