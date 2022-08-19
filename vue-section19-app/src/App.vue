@@ -4,14 +4,21 @@
   </section>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      userName: 'Maximilian',
-    };
-  },
-};
+<script setup>
+import { ref } from 'vue';
+
+const userName = ref('Cris')
+
+setTimeout(() => {
+  userName.value = 'Cristiana'
+}, 2000);
+
+
+  // data() {
+  //   return {
+  //     userName: 'Maximilian',
+  //   };
+  // },
 </script>
 
 <style>
