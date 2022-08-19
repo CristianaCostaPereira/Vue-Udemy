@@ -332,4 +332,5 @@ Whithin the scope of the Find_a_Coach app:
   * lesson 281: deploying the appto Firebase.
 
 
- ### Section 19: The Composition API - Replacing the Options API
+### Section 19: The Composition API - Replacing the Options API
+  * lesson 284: what is and which problems does the Composition API solve;
