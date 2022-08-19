@@ -7,20 +7,20 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { reactive } from 'vue';
 
-// const name = ref('Cristiana')
+// const userName = ref('Cristiana')
 // const age = ref(31)
-const user = ref({
+const user = reactive({
   name: 'Cristiana',
   age: 32
 })
 
-console.log(user);
-
 setTimeout(() => {
-  user.value.name = 'Cris';
-  user.value.age = 33
+  // userName.value = 'Cris';
+  // age.value = 33
+  user.name = 'Cris';
+  user.age = 33
 }, 2000);
 </script>
 
