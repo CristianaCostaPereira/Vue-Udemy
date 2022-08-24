@@ -2,7 +2,7 @@
   <section class="container">
     <h2>{{ userName }}</h2>
 
-    <h3>{{ age }}</h3>
+    <h3>{{ user.age }}</h3>
 
     <button @click="setNewAge">Change Age</button>
 
@@ -23,13 +23,12 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed, watch } from 'vue';
+import { reactive, computed, watch } from 'vue';
 
 // const name = ref('Cristiana')
 // const age = ref(31)
 // const firstName = ref('')
 // const lastName = ref('')
-const age = ref(32)
 
 // We can't watch a property of a reactive object because we are passing a number to watch()
 const user = reactive({
@@ -39,9 +38,16 @@ const user = reactive({
   lastName: ''
 })
 
-watch(age, (newValue, oldValue) => {
-  console.log('Old age: ' + oldValue)
-  console.log('New age: ' + newValue)
+// watch(user.age, (newValue, oldValue) => {
+//   console.log('Old age: ' + oldValue)
+//   console.log('New age: ' + newValue)
+// })
+
+// Instead, use a getter:
+watch(
+  () => user.age,
+  (age) => {
+    console.log(`count is: ${age}`)
 })
 
 // Note: Can not separate the consts with a ','. Need to use ';' or nothing
@@ -59,7 +65,7 @@ const userName = computed(() => {
 // })
 
 function setNewAge () {
-  age.value = 33
+  user.age = 33
 }
 </script>
 
