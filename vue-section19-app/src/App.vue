@@ -30,7 +30,6 @@ import { reactive, computed, watch } from 'vue';
 // const firstName = ref('')
 // const lastName = ref('')
 
-// We can't watch a property of a reactive object because we are passing a number to watch()
 const user = reactive({
   // name: 'Cristiana',
   age: 32,
@@ -43,12 +42,14 @@ const user = reactive({
 //   console.log('New age: ' + newValue)
 // })
 
-// Instead, use a getter:
+// Since we can't watch a property of a reactive object because we are passing a number to watch() we instead use a getter:
 watch(
   () => user.age,
   (age) => {
     console.log(`count is: ${age}`)
-})
+    console.log('count is:' + ' ' + age)
+  }
+)
 
 // Note: Can not separate the consts with a ','. Need to use ';' or nothing
 const userName = computed(() => {
