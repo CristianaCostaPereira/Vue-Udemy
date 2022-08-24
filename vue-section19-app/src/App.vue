@@ -10,13 +10,13 @@
       <input
         type="text"
         placeholder="First Name"
-        @input="setFirstName"
+        v-model="firstName"
       />
 
       <input
         type="text"
         placeholder="Last Name"
-        @input="setLastName"
+        v-model="lastName"
       />
     </div>
   </section>
@@ -35,20 +35,12 @@ const lastName = ref('')
 //   age: 32,
 // }),
 
-const userName = computed(function() {
+const userName = computed(() => {
   return firstName.value + ' ' + lastName.value
 })
 
 function setNewAge () {
   age.value = 33
-}
-
-function setFirstName (event) {
-  firstName.value = event.target.value
-}
-
-function setLastName (event) {
-  lastName.value = event.target.value
 }
 </script>
 
