@@ -2,7 +2,7 @@
   <section class="container">
     <h2>{{ userName }}</h2>
 
-    <h3>{{ age }}</h3>
+    <h3>{{ user.age }}</h3>
 
     <button @click="setNewAge">Change Age</button>
 
@@ -10,37 +10,40 @@
       <input
         type="text"
         placeholder="First Name"
-        v-model="firstName"
+        v-model="user.firstName"
       />
 
       <input
         type="text"
         placeholder="Last Name"
-        v-model="lastName"
+        v-model="user.lastName"
       />
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { reactive, computed } from 'vue';
 
 // const userName = ref('Cristiana')
-const age = ref(31)
-const firstName = ref('')
-const lastName = ref('')
+// const age = ref(31)
+// const firstName = ref('')
+// const lastName = ref('')
 
-// const user = reactive({
-//   name: 'Cristiana',
-//   age: 32,
-// }),
+const user = reactive({
+  // name: 'Cristiana',
+  age: 32,
+  firstName: '',
+  lastName: ''
+})
 
+// Note: Can not separate the consts with a ','. Need to use ';' or nothing
 const userName = computed(() => {
-  return firstName.value + ' ' + lastName.value
+  return user.firstName + ' ' + user.lastName
 })
 
 function setNewAge () {
-  age.value = 33
+  user.age = 33
 }
 </script>
 
