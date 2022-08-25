@@ -56,7 +56,7 @@ const userName = computed(() => {
   return user.firstName + ' ' + user.lastName
 })
 
-// multiple dependencies that trigger the watcher function
+// Use of multiple dependencies that trigger the watcher function
 // watch([age, userName], (newValues, oldValues) => {
 //   console.log('Old age: ' + oldValues[0])
 //   console.log('New age: ' + newValues[0])

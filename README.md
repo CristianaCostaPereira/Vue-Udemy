@@ -334,3 +334,15 @@ Whithin the scope of the Find_a_Coach app:
 
 ### Section 19: The Composition API - Replacing the Options API
   * lesson 284: what is and which problems does the Composition API solve;
+  * lesson 285-288: data management concepts for reactive data - `refs` and `reactive`;
+  * lesson 289: replacing "methods" with regular functions;
+
+Assignment 7:
+  * practice data and functions;
+
+  * lesson 290: replacing "computed properties" with the "computed" function;
+  * lesson 291: two-way-binding and the composition API;
+  * lesson 292: working with watchers;
+
+Assignment 8:
+  * practice composition API core building blocks;
