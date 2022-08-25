@@ -16,19 +16,22 @@
       <input
         type="text"
         placeholder="Last Name"
-        v-model="user.lastName"
+        ref="lastNameInput"
       />
+
+      <button @click="setLastName">Set Last Name</button>
     </div>
   </section>
 </template>
 
 <script setup>
-import { reactive, computed, watch } from 'vue';
+import { ref, reactive, computed, watch } from 'vue';
 
 // const name = ref('Cristiana')
 // const age = ref(31)
 // const firstName = ref('')
 // const lastName = ref('')
+const lastNameInput = ref(null)
 
 const user = reactive({
   // name: 'Cristiana',
@@ -67,6 +70,11 @@ const userName = computed(() => {
 
 function setNewAge () {
   user.age = 33
+}
+
+// How to work with template refs
+function setLastName () {
+  user.lastName = lastNameInput.value.value
 }
 </script>
 
