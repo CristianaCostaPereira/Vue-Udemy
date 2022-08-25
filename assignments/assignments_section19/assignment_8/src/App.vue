@@ -52,7 +52,7 @@ const remainingFunds = computed (() => {
   return expenses.availableFunds - expenses.currentExpenses
 })
 
-watch(remainingFunds, (val) => {
+watch (remainingFunds, (val) => {
   if (val < 0) {
     alert('You are broke!');
   }

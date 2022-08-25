@@ -42,15 +42,15 @@
 <script setup>
 import { ref, computed, watch } from 'vue';
 
-const availableFunds = ref(100)
+const availableFunds = 100
 const currentExpenses = ref(0)
 const enteredExpense = ref(0)
 
 const remainingFunds = computed (() => {
-  return availableFunds.value - currentExpenses.value
+  return availableFunds - currentExpenses.value
 })
 
-watch(remainingFunds, (val) => {
+watch (remainingFunds, (val) => {
   if (val < 0) {
     alert('You are broke!');
   }
