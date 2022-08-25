@@ -6,12 +6,12 @@
   <section>
     <div>
       Available Funds:
-      {{ expenses.availableFunds }}
+      {{ availableFunds }}
     </div>
 
     <div>
       Total Expenses:
-      {{ expenses.currentExpenses }}
+      {{ currentExpenses }}
     </div>
 
     <hr />
@@ -26,11 +26,10 @@
     <form @submit.prevent="addExpense">
       <div>
         <label for="amount">Amount</label>
-
         <input
           id="amount"
           type="number"
-          v-model="expenses.enteredExpense"
+          v-model="enteredExpense"
         />
       </div>
 
@@ -39,28 +38,36 @@
   </section>
 </template>
 
-<script setup>
-import { reactive, computed, watch } from 'vue';
+<script>
+export default {
+  data() {
+    return {
+      availableFunds: 100,
+      currentExpenses: 0,
+      enteredExpense: 0,
+    };
+  },
 
-const expenses = reactive({
-  availableFunds: 100,
-  currentExpenses: 0,
-  enteredExpense: 0
-})
+  computed: {
+    remainingFunds() {
+      return this.availableFunds - this.currentExpenses;
+    }
+  },
 
-const remainingFunds = computed (() => {
-  return expenses.availableFunds - expenses.currentExpenses
-})
+  methods: {
+    addExpense() {
+      this.currentExpenses += this.enteredExpense;
+    }
+  },
 
-watch(remainingFunds, (val) => {
-  if (val < 0) {
-    alert('You are broke!');
+  watch: {
+    remainingFunds(val) {
+      if (val < 0) {
+        alert('You are broke!');
+      }
+    }
   }
-})
-
-function addExpense () {
-  expenses.currentExpenses += expenses.enteredExpense
-}
+};
 </script>
 
 <style>
