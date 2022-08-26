@@ -4,10 +4,10 @@
 </template>
 
 <script>
-import { computed } from 'vue';
+import { computed, inject } from 'vue';
 
 export default {
-  props: ['firstName', 'lastName', 'age'],
+  props: ['firstName', 'lastName'],
 
   // setup(props, context) {
   setup(props) {
@@ -15,10 +15,12 @@ export default {
       return props.firstName + ' ' + props.lastName
     })
 
+    const age = inject('userAge')
+
     // Same as this.$emit('sava-data', 1) in the options API
     // context.emit('sava-data', 1)
 
-    return { userName: userName }
+    return { userName: userName, age }
   }
 }
 

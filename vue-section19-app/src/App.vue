@@ -2,8 +2,7 @@
   <section class="container">
     <user-data
       :first-name="user.firstName"
-      :last-name="user.lastName"
-      :age="user.age">
+      :last-name="user.lastName">
     </user-data>
 
     <button @click="setNewAge">Change Age</button>
@@ -27,38 +26,31 @@
 </template>
 
 <script setup>
-import { ref, reactive, watch } from 'vue'
+import { ref, reactive, watch, provide } from 'vue'
 
 // Import and declare it in the template, is all that is needed to use a componet with <script setup>
 import UserData from './components/UserData.vue';
 
 // const name = ref('Cristiana')
-// const age = ref(31)
 // const firstName = ref('')
 // const lastName = ref('')
+const age = ref(32)
 const lastNameInput = ref(null)
 
 const user = reactive({
-  age: 32,
   firstName: '',
   lastName: ''
 })
 
-// watch(user.age, (newValue, oldValue) => {
-//   console.log('Old age: ' + oldValue)
-//   console.log('New age: ' + newValue)
-// })
+provide('userAge', age)
 
-// Since we can't watch a property of a reactive object because we are passing a number to watch() we instead use a getter:
-watch(
-  () => user.age,
-  (age) => {
-    console.log(`count is: ${age}`)
-    console.log('count is:' + ' ' + age)
-  }
-)
+watch(age, (newValue, oldValue) => {
+  console.log('Old age: ' + oldValue)
+  console.log('New age: ' + newValue)
+})
+
 function setNewAge () {
-  user.age = 33
+  age.value = 33
 }
 
 // How to work with template refs
