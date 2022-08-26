@@ -346,3 +346,9 @@ Assignment 7:
 
 Assignment 8:
   * practice composition API core building blocks;
+
+  * lesson 294: how to use template refs;
+  * lesson 295: components, props and the composition API;
+  * lesson 296: emitting custom events;
+  * lesson 297: working with provide / inject;
+  * lesson 298: lifecycle hooks in the composition API;
