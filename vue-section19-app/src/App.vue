@@ -1,8 +1,10 @@
 <template>
   <section class="container">
-    <h2>{{ userName }}</h2>
-
-    <h3>{{ user.age }}</h3>
+    <user-data
+      :first-name="user.firstName"
+      :last-name="user.lastName"
+      :age="user.age">
+    </user-data>
 
     <button @click="setNewAge">Change Age</button>
 
@@ -25,7 +27,10 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed, watch } from 'vue';
+import { ref, reactive, watch } from 'vue'
+
+// Import and declare it in the template, is all that is needed to use a componet with <script setup>
+import UserData from './components/UserData.vue';
 
 // const name = ref('Cristiana')
 // const age = ref(31)
@@ -52,11 +57,6 @@ watch(
     console.log('count is:' + ' ' + age)
   }
 )
-
-const userName = computed(() => {
-  return user.firstName + ' ' + user.lastName
-})
-
 function setNewAge () {
   user.age = 33
 }
