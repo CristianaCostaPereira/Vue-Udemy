@@ -34,7 +34,6 @@ import { ref, reactive, computed, watch } from 'vue';
 const lastNameInput = ref(null)
 
 const user = reactive({
-  // name: 'Cristiana',
   age: 32,
   firstName: '',
   lastName: ''
@@ -54,19 +53,9 @@ watch(
   }
 )
 
-// Note: Can not separate the consts with a ','. Need to use ';' or nothing
 const userName = computed(() => {
   return user.firstName + ' ' + user.lastName
 })
-
-// Use of multiple dependencies that trigger the watcher function
-// watch([age, userName], (newValues, oldValues) => {
-//   console.log('Old age: ' + oldValues[0])
-//   console.log('New age: ' + newValues[0])
-
-//   console.log('Old name: ' + oldValues[1])
-//   console.log('New name: ' + newValues[1])
-// })
 
 function setNewAge () {
   user.age = 33
