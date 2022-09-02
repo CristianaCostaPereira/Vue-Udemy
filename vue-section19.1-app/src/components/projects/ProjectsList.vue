@@ -1,12 +1,24 @@
 <template>
   <base-container v-if="user">
     <h2>{{ user.fullName }}: Projects</h2>
-    <base-search v-if="hasProjects" @search="updateSearch" :search-term="enteredSearchTerm"></base-search>
+
+    <base-search
+      v-if="hasProjects"
+      @search="updateSearch"
+      :search-term="enteredSearchTerm">
+    </base-search>
+
     <ul v-if="hasProjects">
-      <project-item v-for="prj in availableProjects" :key="prj.id" :title="prj.title"></project-item>
+      <project-item
+        v-for="prj in availableProjects"
+        :key="prj.id"
+        :title="prj.title">
+      </project-item>
     </ul>
+
     <h3 v-else>No projects found.</h3>
   </base-container>
+
   <base-container v-else>
     <h3>No user selected.</h3>
   </base-container>
@@ -19,17 +31,21 @@ export default {
   components: {
     ProjectItem,
   },
+
   props: ['user'],
+
   data() {
     return {
       enteredSearchTerm: '',
-      activeSearchTerm: '',
-    };
+      activeSearchTerm: ''
+    }
   },
+
   computed: {
     hasProjects() {
       return this.user.projects && this.availableProjects.length > 0;
     },
+
     availableProjects() {
       if (this.activeSearchTerm) {
         return this.user.projects.filter((prj) =>
@@ -37,13 +53,15 @@ export default {
         );
       }
       return this.user.projects;
-    },
+    }
   },
+
   methods: {
     updateSearch(val) {
       this.enteredSearchTerm = val;
-    },
+    }
   },
+
   watch: {
     enteredSearchTerm(val) {
       setTimeout(() => {
@@ -52,11 +70,12 @@ export default {
         }
       }, 300);
     },
+
     user() {
       this.enteredSearchTerm = '';
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style scoped>
