@@ -55,5 +55,4 @@ export default {
     return { userName: userName, age }
   }
 }
-
 </script>
