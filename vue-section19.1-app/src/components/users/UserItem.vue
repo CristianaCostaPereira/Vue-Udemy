@@ -14,9 +14,9 @@ export default {
 
   methods: {
     viewProjects() {
-      this.$emit('list-projects', this.id);
-    },
-  },
+      this.$emit('list-projects', this.id)
+    }
+  }
 }
 </script>
 

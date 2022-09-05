@@ -16,10 +16,10 @@ export default {
 
   methods: {
     search(event) {
-      this.$emit('search', event.target.value);
+      this.$emit('search', event.target.value)
     }
-  },
-};
+  }
+}
 </script>
 
 <style scoped>

@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import { ref, computed, watch, toRefs } from 'vue';
 import ProjectItem from './ProjectItem.vue';
 
 export default {
@@ -34,45 +35,52 @@ export default {
 
   props: ['user'],
 
-  data() {
-    return {
-      enteredSearchTerm: '',
-      activeSearchTerm: ''
-    }
-  },
+  setup(props) {
+    const enteredSearchTerm = ref('')
+    const activeSearchTerm = ref('')
 
-  computed: {
-    hasProjects() {
-      return this.user.projects && this.availableProjects.length > 0;
-    },
-
-    availableProjects() {
-      if (this.activeSearchTerm) {
-        return this.user.projects.filter((prj) =>
-          prj.title.includes(this.activeSearchTerm)
-        );
+    const availableProjects = computed(() => {
+      if (activeSearchTerm.value) {
+        return props.user.projects.filter((prj) =>
+          prj.title.includes(activeSearchTerm.value)
+        )
       }
-      return this.user.projects;
-    }
-  },
+      return props.user.projects
+    })
 
-  methods: {
-    updateSearch(val) {
-      this.enteredSearchTerm = val;
-    }
-  },
+    const hasProjects = computed(() => {
+      return props.user.projects && availableProjects.value.length > 0
+    })
 
-  watch: {
-    enteredSearchTerm(val) {
+    function updateSearch(val) {
+      enteredSearchTerm.value = val
+    }
+
+    watch(enteredSearchTerm, (newValue) => {
       setTimeout(() => {
-        if (val === this.enteredSearchTerm) {
-          this.activeSearchTerm = val;
+        if (newValue === enteredSearchTerm.value) {
+          activeSearchTerm.value = newValue
         }
-      }, 300);
-    },
+      }, 300)
+    })
 
-    user() {
-      this.enteredSearchTerm = '';
+    // A watcher runs whenever any prop changes, so we use toRefs if we want to garantee that only changes in one of our props triggers the watcher
+    const { user } = toRefs(props)
+
+    watch(user, () => {
+      enteredSearchTerm.value = ''
+    })
+
+    // The code above could be an alternative to the code below, in case I had multiple props (and they could change)
+    // watch(props, () => {
+    //   enteredSearchTerm.value = ''
+    // })
+
+    return {
+      enteredSearchTerm,
+      hasProjects,
+      availableProjects,
+      updateSearch
     }
   }
 }

@@ -75,7 +75,7 @@ export default {
         if (newValue === enteredSearchTerm.value) {
           activeSearchTerm.value = newValue
         }
-      }, 300);
+      }, 300)
     })
 
 // -----------------------------------

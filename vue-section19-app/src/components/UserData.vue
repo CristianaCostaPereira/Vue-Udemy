@@ -45,6 +45,7 @@ export default {
     onBeforeUnmount (() => {
       console.log('onBeforeUnmount');
     })
+
     onUnmounted (() => {
       console.log('onUnmounted');
     })
