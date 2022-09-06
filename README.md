@@ -352,5 +352,7 @@ Assignment 8:
   * lesson 296: emitting custom events;
   * lesson 297: working with provide / inject;
   * lesson 298: lifecycle hooks in the composition API;
-  * lesson 299-305: migrating a project from options API to composition API;
-  * lesson 307: routing, params and the composition API
+  * lesson 299-302: migrating a project from options API to composition API;
+  * lesson 303: routing, params and the composition API;
+  * lesson 304: `useRoute()` and `useRouter` hooks;
+  * lesson 305: using vuex with the compositon API: `useStore`
