@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       alertTitle: 'Delete User?',
-      alertIsVisible: true
+      // alertIsVisible: true
     }
   },
 
