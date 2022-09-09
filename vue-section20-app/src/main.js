@@ -1,7 +1,10 @@
-import { createApp } from 'vue';
+import { createApp } from 'vue'
 
-import App from './App.vue';
+import App from './App.vue'
+import loggerMixin from './mixins/logger'
 
 const app = createApp(App)
 
-app.mount('#app');
+app.mixin(loggerMixin)
+
+app.mount('#app')
