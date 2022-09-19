@@ -1,7 +1,7 @@
 <template>
   <user-alert
     v-if="alertIsVisible"
-    title="Delete the User?"
+    :title="alertTitle"
     @close="hideAlert">
 
     <p>Do you want to continue with deleting a user?</p>
@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 import UserAlert from './UserAlert.vue'
 import useAlert from '../hooks/alert'
 
@@ -24,12 +25,15 @@ export default {
   },
 
   setup() {
-    const [alertIsVisible, showAlert, hideAlert] = useAlert()
+    const alertTitle = ref('Delete User?')
+
+    const [alertIsVisible, showAlert, hideAlert] = useAlert(true)
 
     return {
       alertIsVisible,
       showAlert,
-      hideAlert
+      hideAlert,
+      alertTitle
     }
   }
 }
