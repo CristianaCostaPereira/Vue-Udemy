@@ -355,4 +355,11 @@ Assignment 8:
   * lesson 299-302: migrating a project from options API to composition API;
   * lesson 303: routing, params and the composition API;
   * lesson 304: `useRoute()` and `useRouter` hooks;
-  * lesson 305: using vuex with the compositon API: `useStore`
+  * lesson 305: using vuex with the compositon API: `useStore`;
+
+
+### Section 20: Reusing Functionality - Mixins and Custom Composition Functions
+  * lesson 310-313: using `mixins`;
+  * lesson 314-315: custom hooks / composables and the composition API;
+  * lesson 316: why composables are better than mixins;
+  * lesson 317-320: small exercise to creating a custom hook;
