@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import { ref, computed } from 'vue';
+import { ref, computed, toRefs } from 'vue';
 
 import UserItem from './UserItem.vue';
 import useSearch from '../../hooks/search'
@@ -51,7 +51,10 @@ export default {
   emits: ['list-projects'],
 
   setup(props) {
-    const { enteredSearchTerm, availableItems, updateSearch } = useSearch(props.users, 'fullName')
+    // Ensure the useSearch always receive a ref as its items
+    const { users } = toRefs(props)
+
+    const { enteredSearchTerm, availableItems, updateSearch } = useSearch(users, 'fullName')
 
     const sorting = ref(null)
 
