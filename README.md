@@ -363,3 +363,7 @@ Assignment 8:
   * lesson 314-315: custom hooks / composables and the composition API;
   * lesson 316: why composables are better than mixins;
   * lesson 317-320: small exercise to creating a custom hook;
+
+
+### Section 22: Vue 2 to Vue 3 Migration
+  * lesson 323-324: important changes and migration steps
